@@ -1,0 +1,68 @@
+
+Call: mvord(formula = MMO2(tba_g2_hv, tba_g2_av) ~ 0, data = df, link = mvprobit(), 
+    coef.constraints = c(1:2), threshold.constraints = c(1:2), 
+    control = mvord.control(solver = "nlminb"))
+
+Formula: MMO2(tba_g2_hv, tba_g2_av) ~ 0
+
+    link threshold nsubjects ndim   logPL   CLAIC   CLBIC fevals
+mvprobit  flexible       696    2 -861.98 1729.98 1743.68     34
+
+Thresholds:
+               Estimate Std. Error z value Pr(>|z|)    
+tba_g2_hv 0|1  0.556916   0.050392 11.0516   <2e-16 ***
+tba_g2_av 0|1 -0.025214   0.047615 -0.5295   0.5964    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Coefficients:
+     Estimate Std. Error z value Pr(>|z|)
+
+Error Structure:
+                         Estimate Std. Error z value  Pr(>|z|)    
+corr tba_g2_hv tba_g2_av 0.527106   0.050831   10.37 < 2.2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+$call
+mvord(formula = MMO2(tba_g2_hv, tba_g2_av) ~ 0, data = df, link = mvprobit(), 
+    coef.constraints = c(1:2), threshold.constraints = c(1:2), 
+    control = mvord.control(solver = "nlminb"))
+
+$formula
+MMO2(tba_g2_hv, tba_g2_av) ~ 0
+
+$info
+      c("link", object$rho$link$name) c("threshold", object$rho$threshold)
+                                 link                            threshold
+value                        mvprobit                             flexible
+      c("nsubjects", object$rho$n) c("ndim", object$rho$ndim)
+                         nsubjects                       ndim
+value                          696                          2
+      c("logPL", round(-object$rho$objective, 2))
+                                            logPL
+value                                     -861.98
+      c("CLAIC", ifelse(object$rho$se, round(object$rho$claic, 2), 
+                                                              CLAIC
+value                                                       1729.98
+      c("CLBIC", ifelse(object$rho$se, round(object$rho$clbic, 2), 
+                                                              CLBIC
+value                                                       1743.68
+      c("fevals", if (is.null(object$rho$optRes$fevals)) NA else object$rho$optRes$fevals)
+                                                                                    fevals
+value                                                                                   34
+
+$thresholds
+                 Estimate Std. Error    z value     Pr(>|z|)
+tba_g2_hv 0|1  0.55691608 0.05039222 11.0516285 2.152739e-28
+tba_g2_av 0|1 -0.02521371 0.04761497 -0.5295333 5.964355e-01
+
+$coefficients
+[1] Estimate   Std. Error z value    Pr(>|z|)  
+<0 rows> (or 0-length row.names)
+
+$error.structure
+                          Estimate Std. Error  z value    Pr(>|z|)
+corr tba_g2_hv tba_g2_av 0.5271058   0.050831 10.36977 3.40344e-25
+
+attr(,"class")
+[1] "summary.mvord"

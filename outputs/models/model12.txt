@@ -1,0 +1,185 @@
+
+Call: mvord(formula = MMO2(tba_g3_hv, tba_g3_av) ~ 0 + age_grp_2 + 
+    age_grp_3 + gender_1 + education_2 + education_3 + school_2 + 
+    school_3 + employment_2 + employment_3 + race_1 + hh_adult + 
+    hh_child + income_grp_2 + income_grp_3 + income_grp_4 + income_grp_5 + 
+    driving_exp + hh_vehs + mode_commute_3 + mode_shopping_3 + 
+    mode_personal_3 + mode_social_3 + citation_1 + crash_exp_1 + 
+    rec_trips + time + cost + veh_own_1 + veh_type_1 + veh_type_2 + 
+    veh_type_3 + veh_feature_1 + veh_feature_2 + veh_feature_3 + 
+    veh_feature_4 + veh_feature_5 + veh_feature_6 + veh_feature_7 + 
+    companion_tot + companion_1 + companion_2 + companion_3 + 
+    companion_4 + companion_5 + per_drive_3 + per_drive_4 + per_drive_5 + 
+    trip_exp_1 + trip_exp_3 + trip_exp_4 + av_usefulness + av_concern + 
+    tech_savviness + driving_enjoyment + polychronicity + envt_concern, 
+    data = df, coef.constraints = cbind(c(NA, NA), c(NA, NA), 
+        c(1, NA), c(NA, NA), c(1, NA), c(NA, NA), c(NA, NA), 
+        c(NA, NA), c(NA, NA), c(NA, 2), c(1, NA), c(NA, NA), 
+        c(NA, NA), c(NA, NA), c(NA, NA), c(NA, 2), c(NA, NA), 
+        c(NA, NA), c(NA, NA), c(NA, NA), c(NA, NA), c(1, NA), 
+        c(1, NA), c(NA, NA), c(1, 2), c(NA, NA), c(NA, NA), c(NA, 
+            NA), c(1, NA), c(1, NA), c(NA, NA), c(NA, NA), c(NA, 
+            NA), c(NA, NA), c(1, NA), c(NA, NA), c(NA, NA), c(NA, 
+            NA), c(NA, NA), c(NA, NA), c(NA, 2), c(1, 2), c(1, 
+            NA), c(NA, 2), c(NA, NA), c(NA, NA), c(NA, NA), c(1, 
+            NA), c(1, NA), c(NA, NA), c(NA, 2), c(NA, 2), c(NA, 
+            NA), c(NA, NA), c(NA, NA), c(1, 2)), threshold.constraints = c(1:2), 
+    control = mvord.control(solver = "nlminb"))
+
+Formula: MMO2(tba_g3_hv, tba_g3_av) ~ 0 + age_grp_2 + age_grp_3 + gender_1 + 
+    education_2 + education_3 + school_2 + school_3 + employment_2 + 
+    employment_3 + race_1 + hh_adult + hh_child + income_grp_2 + 
+    income_grp_3 + income_grp_4 + income_grp_5 + driving_exp + 
+    hh_vehs + mode_commute_3 + mode_shopping_3 + mode_personal_3 + 
+    mode_social_3 + citation_1 + crash_exp_1 + rec_trips + time + 
+    cost + veh_own_1 + veh_type_1 + veh_type_2 + veh_type_3 + 
+    veh_feature_1 + veh_feature_2 + veh_feature_3 + veh_feature_4 + 
+    veh_feature_5 + veh_feature_6 + veh_feature_7 + companion_tot + 
+    companion_1 + companion_2 + companion_3 + companion_4 + companion_5 + 
+    per_drive_3 + per_drive_4 + per_drive_5 + trip_exp_1 + trip_exp_3 + 
+    trip_exp_4 + av_usefulness + av_concern + tech_savviness + 
+    driving_enjoyment + polychronicity + envt_concern
+
+    link threshold nsubjects ndim   logPL   CLAIC   CLBIC fevals
+mvprobit  flexible       696    2 -587.56 1229.14 1351.91     50
+
+Thresholds:
+               Estimate Std. Error z value Pr(>|z|)  
+tba_g3_hv 0|1 -0.069994   0.256968 -0.2724  0.78533  
+tba_g3_av 0|1 -0.363529   0.163507 -2.2233  0.02619 *
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Coefficients:
+                  Estimate Std. Error z value  Pr(>|z|)    
+gender_11 1       0.205186   0.115227  1.7807 0.0749599 .  
+education_31 1   -0.506371   0.149768 -3.3810 0.0007221 ***
+race_11 1         0.264368   0.133199  1.9848 0.0471707 *  
+hh_adult 1        0.116719   0.059583  1.9589 0.0501221 .  
+income_grp_51 1  -0.280349   0.139234 -2.0135 0.0440608 *  
+mode_social_31 1  0.387249   0.164778  2.3501 0.0187669 *  
+citation_11 1    -0.234823   0.120001 -1.9568 0.0503671 .  
+rec_trips 1       0.063519   0.030002  2.1172 0.0342439 *  
+rec_trips 2       0.052911   0.025694  2.0593 0.0394651 *  
+veh_type_11 1    -0.422853   0.174850 -2.4184 0.0155897 *  
+veh_type_21 1    -0.332706   0.181120 -1.8369 0.0662186 .  
+veh_feature_41 1  0.340337   0.139549  2.4388 0.0147345 *  
+companion_21 1    0.246968   0.117034  2.1102 0.0348389 *  
+companion_31 1    0.693043   0.356746  1.9427 0.0520547 .  
+companion_31 2    0.576528   0.247204  2.3322 0.0196904 *  
+companion_41 1    0.373165   0.188736  1.9772 0.0480214 *  
+companion_51 1    0.270532   0.160761  1.6828 0.0924090 .  
+trip_exp_11 1     0.370172   0.117328  3.1550 0.0016049 ** 
+trip_exp_31 1     0.440112   0.225241  1.9540 0.0507054 .  
+av_usefulness 1   0.336368   0.059357  5.6669 1.454e-08 ***
+av_concern 1      0.173856   0.067595  2.5720 0.0101103 *  
+envt_concern 1    0.239406   0.111252  2.1519 0.0314027 *  
+envt_concern 2    0.282204   0.120476  2.3424 0.0191593 *  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Error Structure:
+                         Estimate Std. Error z value  Pr(>|z|)    
+corr tba_g3_hv tba_g3_av  0.66967    0.05677  11.796 < 2.2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+$call
+mvord(formula = MMO2(tba_g3_hv, tba_g3_av) ~ 0 + age_grp_2 + 
+    age_grp_3 + gender_1 + education_2 + education_3 + school_2 + 
+    school_3 + employment_2 + employment_3 + race_1 + hh_adult + 
+    hh_child + income_grp_2 + income_grp_3 + income_grp_4 + income_grp_5 + 
+    driving_exp + hh_vehs + mode_commute_3 + mode_shopping_3 + 
+    mode_personal_3 + mode_social_3 + citation_1 + crash_exp_1 + 
+    rec_trips + time + cost + veh_own_1 + veh_type_1 + veh_type_2 + 
+    veh_type_3 + veh_feature_1 + veh_feature_2 + veh_feature_3 + 
+    veh_feature_4 + veh_feature_5 + veh_feature_6 + veh_feature_7 + 
+    companion_tot + companion_1 + companion_2 + companion_3 + 
+    companion_4 + companion_5 + per_drive_3 + per_drive_4 + per_drive_5 + 
+    trip_exp_1 + trip_exp_3 + trip_exp_4 + av_usefulness + av_concern + 
+    tech_savviness + driving_enjoyment + polychronicity + envt_concern, 
+    data = df, coef.constraints = cbind(c(NA, NA), c(NA, NA), 
+        c(1, NA), c(NA, NA), c(1, NA), c(NA, NA), c(NA, NA), 
+        c(NA, NA), c(NA, NA), c(NA, 2), c(1, NA), c(NA, NA), 
+        c(NA, NA), c(NA, NA), c(NA, NA), c(NA, 2), c(NA, NA), 
+        c(NA, NA), c(NA, NA), c(NA, NA), c(NA, NA), c(1, NA), 
+        c(1, NA), c(NA, NA), c(1, 2), c(NA, NA), c(NA, NA), c(NA, 
+            NA), c(1, NA), c(1, NA), c(NA, NA), c(NA, NA), c(NA, 
+            NA), c(NA, NA), c(1, NA), c(NA, NA), c(NA, NA), c(NA, 
+            NA), c(NA, NA), c(NA, NA), c(NA, 2), c(1, 2), c(1, 
+            NA), c(NA, 2), c(NA, NA), c(NA, NA), c(NA, NA), c(1, 
+            NA), c(1, NA), c(NA, NA), c(NA, 2), c(NA, 2), c(NA, 
+            NA), c(NA, NA), c(NA, NA), c(1, 2)), threshold.constraints = c(1:2), 
+    control = mvord.control(solver = "nlminb"))
+
+$formula
+MMO2(tba_g3_hv, tba_g3_av) ~ 0 + age_grp_2 + age_grp_3 + gender_1 + 
+    education_2 + education_3 + school_2 + school_3 + employment_2 + 
+    employment_3 + race_1 + hh_adult + hh_child + income_grp_2 + 
+    income_grp_3 + income_grp_4 + income_grp_5 + driving_exp + 
+    hh_vehs + mode_commute_3 + mode_shopping_3 + mode_personal_3 + 
+    mode_social_3 + citation_1 + crash_exp_1 + rec_trips + time + 
+    cost + veh_own_1 + veh_type_1 + veh_type_2 + veh_type_3 + 
+    veh_feature_1 + veh_feature_2 + veh_feature_3 + veh_feature_4 + 
+    veh_feature_5 + veh_feature_6 + veh_feature_7 + companion_tot + 
+    companion_1 + companion_2 + companion_3 + companion_4 + companion_5 + 
+    per_drive_3 + per_drive_4 + per_drive_5 + trip_exp_1 + trip_exp_3 + 
+    trip_exp_4 + av_usefulness + av_concern + tech_savviness + 
+    driving_enjoyment + polychronicity + envt_concern
+
+$info
+      c("link", object$rho$link$name) c("threshold", object$rho$threshold)
+                                 link                            threshold
+value                        mvprobit                             flexible
+      c("nsubjects", object$rho$n) c("ndim", object$rho$ndim)
+                         nsubjects                       ndim
+value                          696                          2
+      c("logPL", round(-object$rho$objective, 2))
+                                            logPL
+value                                     -587.56
+      c("CLAIC", ifelse(object$rho$se, round(object$rho$claic, 2), 
+                                                              CLAIC
+value                                                       1229.14
+      c("CLBIC", ifelse(object$rho$se, round(object$rho$clbic, 2), 
+                                                              CLBIC
+value                                                       1351.91
+      c("fevals", if (is.null(object$rho$optRes$fevals)) NA else object$rho$optRes$fevals)
+                                                                                    fevals
+value                                                                                   50
+
+$thresholds
+                 Estimate Std. Error    z value   Pr(>|z|)
+tba_g3_hv 0|1 -0.06999415  0.2569683 -0.2723844 0.78532648
+tba_g3_av 0|1 -0.36352908  0.1635074 -2.2233187 0.02619432
+
+$coefficients
+                    Estimate Std. Error   z value     Pr(>|z|)
+gender_11 1       0.20518630 0.11522728  1.780709 7.495993e-02
+education_31 1   -0.50637071 0.14976800 -3.381034 7.221361e-04
+race_11 1         0.26436828 0.13319881  1.984765 4.717067e-02
+hh_adult 1        0.11671863 0.05958314  1.958920 5.012212e-02
+income_grp_51 1  -0.28034881 0.13923374 -2.013512 4.406079e-02
+mode_social_31 1  0.38724906 0.16477783  2.350128 1.876694e-02
+citation_11 1    -0.23482290 0.12000149 -1.956833 5.036708e-02
+rec_trips 1       0.06351913 0.03000165  2.117188 3.424391e-02
+rec_trips 2       0.05291114 0.02569370  2.059304 3.946511e-02
+veh_type_11 1    -0.42285297 0.17484952 -2.418382 1.558969e-02
+veh_type_21 1    -0.33270584 0.18111951 -1.836941 6.621861e-02
+veh_feature_41 1  0.34033712 0.13954880  2.438839 1.473452e-02
+companion_21 1    0.24696843 0.11703413  2.110226 3.483892e-02
+companion_31 1    0.69304278 0.35674554  1.942681 5.205472e-02
+companion_31 2    0.57652838 0.24720418  2.332195 1.969043e-02
+companion_41 1    0.37316497 0.18873609  1.977179 4.802144e-02
+companion_51 1    0.27053238 0.16076086  1.682825 9.240900e-02
+trip_exp_11 1     0.37017176 0.11732830  3.155008 1.604935e-03
+trip_exp_31 1     0.44011219 0.22524061  1.953965 5.070540e-02
+av_usefulness 1   0.33636798 0.05935658  5.666903 1.454017e-08
+av_concern 1      0.17385575 0.06759463  2.572035 1.011027e-02
+envt_concern 1    0.23940646 0.11125189  2.151932 3.140275e-02
+envt_concern 2    0.28220416 0.12047566  2.342416 1.915933e-02
+
+$error.structure
+                          Estimate Std. Error  z value     Pr(>|z|)
+corr tba_g3_hv tba_g3_av 0.6696697 0.05676991 11.79621 4.082979e-32
+
+attr(,"class")
+[1] "summary.mvord"

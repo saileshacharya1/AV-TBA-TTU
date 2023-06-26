@@ -1,0 +1,654 @@
+
+Call: mvord(formula = MMO2(tba_g5_hv, tba_g5_av) ~ 0 + age_grp_2 + 
+    age_grp_3 + gender_1 + education_2 + education_3 + school_2 + 
+    school_3 + employment_2 + employment_3 + race_1 + hh_adult + 
+    hh_child + income_grp_2 + income_grp_3 + income_grp_4 + income_grp_5 + 
+    driving_exp + hh_vehs + mode_commute_3 + mode_shopping_3 + 
+    mode_personal_3 + mode_social_3 + citation_1 + crash_exp_1 + 
+    rec_trips + time + cost + veh_own_1 + veh_type_1 + veh_type_2 + 
+    veh_type_3 + veh_feature_1 + veh_feature_2 + veh_feature_3 + 
+    veh_feature_4 + veh_feature_5 + veh_feature_6 + veh_feature_7 + 
+    companion_tot + companion_1 + companion_2 + companion_3 + 
+    companion_4 + companion_5 + per_drive_3 + per_drive_4 + per_drive_5 + 
+    trip_exp_1 + trip_exp_3 + trip_exp_4 + av_usefulness + av_concern + 
+    tech_savviness + driving_enjoyment + polychronicity + envt_concern, 
+    data = df, coef.constraints = cbind(c(NA, 2), c(NA, 2), c(1, 
+        NA), c(NA, NA), c(1, NA), c(NA, NA), c(NA, NA), c(NA, 
+        NA), c(NA, NA), c(NA, 2), c(NA, NA), c(NA, 2), c(NA, 
+        NA), c(NA, NA), c(NA, NA), c(NA, NA), c(NA, NA), c(NA, 
+        NA), c(NA, NA), c(NA, 2), c(NA, NA), c(NA, NA), c(NA, 
+        NA), c(1, 2), c(NA, 2), c(NA, NA), c(NA, NA), c(NA, NA), 
+        c(NA, NA), c(1, 2), c(1, NA), c(NA, NA), c(NA, NA), c(NA, 
+            NA), c(NA, NA), c(NA, NA), c(NA, NA), c(NA, NA), 
+        c(NA, NA), c(NA, NA), c(1, NA), c(NA, NA), c(NA, NA), 
+        c(NA, NA), c(NA, NA), c(NA, NA), c(NA, NA), c(NA, NA), 
+        c(1, 2), c(1, 2), c(NA, 2), c(NA, 2), c(NA, NA), c(1, 
+            NA), c(1, NA), c(NA, 2)), threshold.constraints = c(1:2), 
+    control = mvord.control(solver = "nlminb"))
+
+Formula: MMO2(tba_g5_hv, tba_g5_av) ~ 0 + age_grp_2 + age_grp_3 + gender_1 + 
+    education_2 + education_3 + school_2 + school_3 + employment_2 + 
+    employment_3 + race_1 + hh_adult + hh_child + income_grp_2 + 
+    income_grp_3 + income_grp_4 + income_grp_5 + driving_exp + 
+    hh_vehs + mode_commute_3 + mode_shopping_3 + mode_personal_3 + 
+    mode_social_3 + citation_1 + crash_exp_1 + rec_trips + time + 
+    cost + veh_own_1 + veh_type_1 + veh_type_2 + veh_type_3 + 
+    veh_feature_1 + veh_feature_2 + veh_feature_3 + veh_feature_4 + 
+    veh_feature_5 + veh_feature_6 + veh_feature_7 + companion_tot + 
+    companion_1 + companion_2 + companion_3 + companion_4 + companion_5 + 
+    per_drive_3 + per_drive_4 + per_drive_5 + trip_exp_1 + trip_exp_3 + 
+    trip_exp_4 + av_usefulness + av_concern + tech_savviness + 
+    driving_enjoyment + polychronicity + envt_concern
+
+    link threshold nsubjects ndim   logPL   CLAIC   CLBIC fevals
+mvprobit  flexible       696    2 -747.33 1548.68 1671.44     48
+
+Thresholds:
+              Estimate Std. Error z value Pr(>|z|)
+tba_g5_hv 0|1 -0.03156    0.11510 -0.2742   0.7839
+tba_g5_av 0|1  0.18397    0.23694  0.7764   0.4375
+
+Coefficients:
+                     Estimate Std. Error z value  Pr(>|z|)    
+age_grp_21 1        -0.262002   0.115918 -2.2602 0.0238072 *  
+age_grp_31 1        -0.435045   0.169729 -2.5632 0.0103719 *  
+gender_11 1          0.188164   0.098363  1.9129 0.0557551 .  
+education_31 1      -0.332348   0.142729 -2.3285 0.0198846 *  
+race_11 1            0.287621   0.134427  2.1396 0.0323870 *  
+hh_child 1          -0.092490   0.047881 -1.9317 0.0534013 .  
+mode_shopping_31 1   0.309891   0.183406  1.6896 0.0910972 .  
+crash_exp_11 1      -0.282501   0.112335 -2.5148 0.0119099 *  
+crash_exp_11 2      -0.310994   0.113425 -2.7418 0.0061096 ** 
+rec_trips 1          0.053353   0.023790  2.2427 0.0249156 *  
+veh_type_21 1        0.267501   0.110220  2.4270 0.0152252 *  
+veh_type_21 2        0.214854   0.107435  1.9998 0.0455169 *  
+veh_type_31 1        0.396400   0.196296  2.0194 0.0434451 *  
+companion_21 1       0.242233   0.103825  2.3331 0.0196437 *  
+trip_exp_31 1        0.451683   0.180142  2.5074 0.0121635 *  
+trip_exp_31 2        0.295025   0.174433  1.6913 0.0907720 .  
+trip_exp_41 1        0.399419   0.117382  3.4027 0.0006672 ***
+trip_exp_41 2        0.428195   0.116062  3.6894 0.0002248 ***
+av_usefulness 1      0.285125   0.057711  4.9405 7.790e-07 ***
+av_concern 1         0.168150   0.062218  2.7026 0.0068800 ** 
+driving_enjoyment 1  0.332110   0.123134  2.6971 0.0069937 ** 
+polychronicity 1     0.255607   0.058746  4.3511 1.355e-05 ***
+envt_concern 1       0.280727   0.094744  2.9630 0.0030464 ** 
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Error Structure:
+                         Estimate Std. Error z value  Pr(>|z|)    
+corr tba_g5_hv tba_g5_av 0.667599   0.045544  14.658 < 2.2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+$call
+mvord(formula = MMO2(tba_g5_hv, tba_g5_av) ~ 0 + age_grp_2 + 
+    age_grp_3 + gender_1 + education_2 + education_3 + school_2 + 
+    school_3 + employment_2 + employment_3 + race_1 + hh_adult + 
+    hh_child + income_grp_2 + income_grp_3 + income_grp_4 + income_grp_5 + 
+    driving_exp + hh_vehs + mode_commute_3 + mode_shopping_3 + 
+    mode_personal_3 + mode_social_3 + citation_1 + crash_exp_1 + 
+    rec_trips + time + cost + veh_own_1 + veh_type_1 + veh_type_2 + 
+    veh_type_3 + veh_feature_1 + veh_feature_2 + veh_feature_3 + 
+    veh_feature_4 + veh_feature_5 + veh_feature_6 + veh_feature_7 + 
+    companion_tot + companion_1 + companion_2 + companion_3 + 
+    companion_4 + companion_5 + per_drive_3 + per_drive_4 + per_drive_5 + 
+    trip_exp_1 + trip_exp_3 + trip_exp_4 + av_usefulness + av_concern + 
+    tech_savviness + driving_enjoyment + polychronicity + envt_concern, 
+    data = df, coef.constraints = cbind(c(NA, 2), c(NA, 2), c(1, 
+        NA), c(NA, NA), c(1, NA), c(NA, NA), c(NA, NA), c(NA, 
+        NA), c(NA, NA), c(NA, 2), c(NA, NA), c(NA, 2), c(NA, 
+        NA), c(NA, NA), c(NA, NA), c(NA, NA), c(NA, NA), c(NA, 
+        NA), c(NA, NA), c(NA, 2), c(NA, NA), c(NA, NA), c(NA, 
+        NA), c(1, 2), c(NA, 2), c(NA, NA), c(NA, NA), c(NA, NA), 
+        c(NA, NA), c(1, 2), c(1, NA), c(NA, NA), c(NA, NA), c(NA, 
+            NA), c(NA, NA), c(NA, NA), c(NA, NA), c(NA, NA), 
+        c(NA, NA), c(NA, NA), c(1, NA), c(NA, NA), c(NA, NA), 
+        c(NA, NA), c(NA, NA), c(NA, NA), c(NA, NA), c(NA, NA), 
+        c(1, 2), c(1, 2), c(NA, 2), c(NA, 2), c(NA, NA), c(1, 
+            NA), c(1, NA), c(NA, 2)), threshold.constraints = c(1:2), 
+    control = mvord.control(solver = "nlminb"))
+
+$formula
+MMO2(tba_g5_hv, tba_g5_av) ~ 0 + age_grp_2 + age_grp_3 + gender_1 + 
+    education_2 + education_3 + school_2 + school_3 + employment_2 + 
+    employment_3 + race_1 + hh_adult + hh_child + income_grp_2 + 
+    income_grp_3 + income_grp_4 + income_grp_5 + driving_exp + 
+    hh_vehs + mode_commute_3 + mode_shopping_3 + mode_personal_3 + 
+    mode_social_3 + citation_1 + crash_exp_1 + rec_trips + time + 
+    cost + veh_own_1 + veh_type_1 + veh_type_2 + veh_type_3 + 
+    veh_feature_1 + veh_feature_2 + veh_feature_3 + veh_feature_4 + 
+    veh_feature_5 + veh_feature_6 + veh_feature_7 + companion_tot + 
+    companion_1 + companion_2 + companion_3 + companion_4 + companion_5 + 
+    per_drive_3 + per_drive_4 + per_drive_5 + trip_exp_1 + trip_exp_3 + 
+    trip_exp_4 + av_usefulness + av_concern + tech_savviness + 
+    driving_enjoyment + polychronicity + envt_concern
+
+$info
+      c("link", object$rho$link$name) c("threshold", object$rho$threshold)
+                                 link                            threshold
+value                        mvprobit                             flexible
+      c("nsubjects", object$rho$n) c("ndim", object$rho$ndim)
+                         nsubjects                       ndim
+value                          696                          2
+      c("logPL", round(-object$rho$objective, 2))
+                                            logPL
+value                                     -747.33
+      c("CLAIC", ifelse(object$rho$se, round(object$rho$claic, 2), 
+                                                              CLAIC
+value                                                       1548.68
+      c("CLBIC", ifelse(object$rho$se, round(object$rho$clbic, 2), 
+                                                              CLBIC
+value                                                       1671.44
+      c("fevals", if (is.null(object$rho$optRes$fevals)) NA else object$rho$optRes$fevals)
+                                                                                    fevals
+value                                                                                   48
+
+$thresholds
+                 Estimate Std. Error    z value  Pr(>|z|)
+tba_g5_hv 0|1 -0.03155996  0.1151023 -0.2741905 0.7839382
+tba_g5_av 0|1  0.18396695  0.2369438  0.7764160 0.4375034
+
+$coefficients
+                       Estimate Std. Error   z value     Pr(>|z|)
+age_grp_21 1        -0.26200195 0.11591843 -2.260227 2.380717e-02
+age_grp_31 1        -0.43504472 0.16972862 -2.563178 1.037188e-02
+gender_11 1          0.18816385 0.09836344  1.912945 5.575509e-02
+education_31 1      -0.33234811 0.14272946 -2.328518 1.988462e-02
+race_11 1            0.28762071 0.13442725  2.139601 3.238701e-02
+hh_child 1          -0.09249000 0.04788106 -1.931661 5.340131e-02
+mode_shopping_31 1   0.30989057 0.18340647  1.689638 9.109720e-02
+crash_exp_11 1      -0.28250130 0.11233536 -2.514803 1.190989e-02
+crash_exp_11 2      -0.31099363 0.11342517 -2.741840 6.109614e-03
+rec_trips 1          0.05335303 0.02378956  2.242708 2.491564e-02
+veh_type_21 1        0.26750053 0.11021963  2.426977 1.522521e-02
+veh_type_21 2        0.21485401 0.10743526  1.999846 4.551686e-02
+veh_type_31 1        0.39640034 0.19629554  2.019406 4.344506e-02
+companion_21 1       0.24223333 0.10382537  2.333084 1.964373e-02
+trip_exp_31 1        0.45168269 0.18014235  2.507365 1.216349e-02
+trip_exp_31 2        0.29502485 0.17443267  1.691339 9.077200e-02
+trip_exp_41 1        0.39941872 0.11738246  3.402712 6.672052e-04
+trip_exp_41 2        0.42819524 0.11606246  3.689352 2.248264e-04
+av_usefulness 1      0.28512517 0.05771122  4.940550 7.790264e-07
+av_concern 1         0.16814975 0.06221783  2.702597 6.880002e-03
+driving_enjoyment 1  0.33211041 0.12313420  2.697142 6.993744e-03
+polychronicity 1     0.25560721 0.05874559  4.351087 1.354640e-05
+envt_concern 1       0.28072709 0.09474369  2.963016 3.046406e-03
+
+$error.structure
+                          Estimate Std. Error  z value     Pr(>|z|)
+corr tba_g5_hv tba_g5_av 0.6675986 0.04554445 14.65818 1.194379e-48
+
+attr(,"class")
+[1] "summary.mvord"
+
+Call: mvord(formula = MMO2(tba_g6_hv, tba_g6_av) ~ 0, data = df, link = mvprobit(), 
+    coef.constraints = c(1:2), threshold.constraints = c(1:2), 
+    control = mvord.control(solver = "nlminb"))
+
+Formula: MMO2(tba_g6_hv, tba_g6_av) ~ 0
+
+    link threshold nsubjects ndim   logPL   CLAIC   CLBIC fevals
+mvprobit  flexible       696    2 -856.53 1719.09 1732.79     23
+
+Thresholds:
+               Estimate Std. Error z value  Pr(>|z|)    
+tba_g6_hv 0|1 -0.288468   0.048336 -5.9679 2.403e-09 ***
+tba_g6_av 0|1 -0.411053   0.049100 -8.3717 < 2.2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Coefficients:
+     Estimate Std. Error z value Pr(>|z|)
+
+Error Structure:
+                         Estimate Std. Error z value  Pr(>|z|)    
+corr tba_g6_hv tba_g6_av 0.591747   0.045698  12.949 < 2.2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+$call
+mvord(formula = MMO2(tba_g6_hv, tba_g6_av) ~ 0, data = df, link = mvprobit(), 
+    coef.constraints = c(1:2), threshold.constraints = c(1:2), 
+    control = mvord.control(solver = "nlminb"))
+
+$formula
+MMO2(tba_g6_hv, tba_g6_av) ~ 0
+
+$info
+      c("link", object$rho$link$name) c("threshold", object$rho$threshold)
+                                 link                            threshold
+value                        mvprobit                             flexible
+      c("nsubjects", object$rho$n) c("ndim", object$rho$ndim)
+                         nsubjects                       ndim
+value                          696                          2
+      c("logPL", round(-object$rho$objective, 2))
+                                            logPL
+value                                     -856.53
+      c("CLAIC", ifelse(object$rho$se, round(object$rho$claic, 2), 
+                                                              CLAIC
+value                                                       1719.09
+      c("CLBIC", ifelse(object$rho$se, round(object$rho$clbic, 2), 
+                                                              CLBIC
+value                                                       1732.79
+      c("fevals", if (is.null(object$rho$optRes$fevals)) NA else object$rho$optRes$fevals)
+                                                                                    fevals
+value                                                                                   23
+
+$thresholds
+                Estimate Std. Error   z value     Pr(>|z|)
+tba_g6_hv 0|1 -0.2884684 0.04833634 -5.967941 2.402661e-09
+tba_g6_av 0|1 -0.4110525 0.04910035 -8.371683 5.680125e-17
+
+$coefficients
+[1] Estimate   Std. Error z value    Pr(>|z|)  
+<0 rows> (or 0-length row.names)
+
+$error.structure
+                          Estimate Std. Error  z value     Pr(>|z|)
+corr tba_g6_hv tba_g6_av 0.5917474 0.04569842 12.94897 2.381322e-38
+
+attr(,"class")
+[1] "summary.mvord"
+
+Call: mvord(formula = MMO2(tba_g6_hv, tba_g6_av) ~ 0 + age_grp_2 + 
+    age_grp_3 + gender_1 + education_2 + education_3 + school_2 + 
+    school_3 + employment_2 + employment_3 + race_1 + hh_adult + 
+    hh_child + income_grp_2 + income_grp_3 + income_grp_4 + income_grp_5 + 
+    driving_exp + hh_vehs + mode_commute_3 + mode_shopping_3 + 
+    mode_personal_3 + mode_social_3 + citation_1 + crash_exp_1 + 
+    rec_trips + time + cost + veh_own_1 + veh_type_1 + veh_type_2 + 
+    veh_type_3 + veh_feature_1 + veh_feature_2 + veh_feature_3 + 
+    veh_feature_4 + veh_feature_5 + veh_feature_6 + veh_feature_7 + 
+    companion_tot + companion_1 + companion_2 + companion_3 + 
+    companion_4 + companion_5 + per_drive_3 + per_drive_4 + per_drive_5 + 
+    trip_exp_1 + trip_exp_3 + trip_exp_4 + av_usefulness + av_concern + 
+    tech_savviness + driving_enjoyment + polychronicity + envt_concern, 
+    data = df, link = mvprobit(), coef.constraints = cbind(c(1, 
+        2), c(1, 2), c(1, 2), c(1, 2), c(1, 2), c(1, 2), c(1, 
+        2), c(1, 2), c(1, 2), c(1, 2), c(1, 2), c(1, 2), c(1, 
+        2), c(1, 2), c(1, 2), c(1, 2), c(1, 2), c(1, 2), c(1, 
+        2), c(1, 2), c(1, 2), c(1, 2), c(1, 2), c(1, 2), c(1, 
+        2), c(1, 2), c(1, 2), c(1, 2), c(1, 2), c(1, 2), c(1, 
+        2), c(1, NA), c(1, NA), c(1, NA), c(1, NA), c(1, NA), 
+        c(1, NA), c(1, NA), c(1, 2), c(1, 2), c(1, 2), c(1, 2), 
+        c(1, 2), c(1, 2), c(1, NA), c(1, NA), c(1, NA), c(1, 
+            2), c(1, 2), c(1, 2), c(NA, 2), c(NA, 2), c(1, 2), 
+        c(1, 2), c(1, 2), c(1, 2)), threshold.constraints = c(1:2), 
+    control = mvord.control(solver = "nlminb"))
+
+Formula: MMO2(tba_g6_hv, tba_g6_av) ~ 0 + age_grp_2 + age_grp_3 + gender_1 + 
+    education_2 + education_3 + school_2 + school_3 + employment_2 + 
+    employment_3 + race_1 + hh_adult + hh_child + income_grp_2 + 
+    income_grp_3 + income_grp_4 + income_grp_5 + driving_exp + 
+    hh_vehs + mode_commute_3 + mode_shopping_3 + mode_personal_3 + 
+    mode_social_3 + citation_1 + crash_exp_1 + rec_trips + time + 
+    cost + veh_own_1 + veh_type_1 + veh_type_2 + veh_type_3 + 
+    veh_feature_1 + veh_feature_2 + veh_feature_3 + veh_feature_4 + 
+    veh_feature_5 + veh_feature_6 + veh_feature_7 + companion_tot + 
+    companion_1 + companion_2 + companion_3 + companion_4 + companion_5 + 
+    per_drive_3 + per_drive_4 + per_drive_5 + trip_exp_1 + trip_exp_3 + 
+    trip_exp_4 + av_usefulness + av_concern + tech_savviness + 
+    driving_enjoyment + polychronicity + envt_concern
+
+    link threshold nsubjects ndim   logPL   CLAIC   CLBIC fevals
+mvprobit  flexible       696    2 -719.08 1679.95 2229.44    170
+
+Thresholds:
+              Estimate Std. Error z value Pr(>|z|)
+tba_g6_hv 0|1 0.195891   0.561445  0.3489   0.7272
+tba_g6_av 0|1 0.081864   0.542927  0.1508   0.8801
+
+Coefficients:
+                       Estimate  Std. Error z value  Pr(>|z|)    
+age_grp_21 1        -0.42880282  0.19574199 -2.1907 0.0284769 *  
+age_grp_21 2        -0.50679522  0.19103091 -2.6529 0.0079792 ** 
+age_grp_31 1        -0.42616641  0.36720268 -1.1606 0.2458146    
+age_grp_31 2        -0.32515310  0.34523093 -0.9418 0.3462734    
+gender_11 1          0.12366065  0.14289454  0.8654 0.3868204    
+gender_11 2          0.08830035  0.12996546  0.6794 0.4968756    
+education_21 1      -0.16659732  0.16184630 -1.0294 0.3033128    
+education_21 2      -0.06821867  0.16602957 -0.4109 0.6811586    
+education_31 1      -0.65858839  0.23806972 -2.7664 0.0056685 ** 
+education_31 2      -0.27753079  0.23485750 -1.1817 0.2373253    
+school_21 1         -0.48858121  0.26635054 -1.8344 0.0666014 .  
+school_21 2          0.01490765  0.30019953  0.0497 0.9603940    
+school_31 1         -0.25028384  0.18236562 -1.3724 0.1699300    
+school_31 2         -0.43175923  0.17603027 -2.4528 0.0141767 *  
+employment_21 1     -0.07650527  0.25243556 -0.3031 0.7618376    
+employment_21 2     -0.07881344  0.23634042 -0.3335 0.7387763    
+employment_31 1      0.25065134  0.19807176  1.2655 0.2057075    
+employment_31 2      0.15348376  0.18963000  0.8094 0.4182935    
+race_11 1           -0.26057981  0.20801301 -1.2527 0.2103116    
+race_11 2            0.11253107  0.18171288  0.6193 0.5357322    
+hh_adult 1           0.04126391  0.07894669  0.5227 0.6011965    
+hh_adult 2           0.05347532  0.07574536  0.7060 0.4801956    
+hh_child 1          -0.08124043  0.08757567 -0.9277 0.3535841    
+hh_child 2          -0.07822010  0.08206437 -0.9532 0.3405114    
+income_grp_21 1      0.06731694  0.21901594  0.3074 0.7585687    
+income_grp_21 2      0.01090730  0.20931970  0.0521 0.9584424    
+income_grp_31 1      0.11749279  0.24071615  0.4881 0.6254813    
+income_grp_31 2      0.05804441  0.24343378  0.2384 0.8115397    
+income_grp_41 1      0.25383417  0.28683044  0.8850 0.3761769    
+income_grp_41 2      0.13718494  0.26410054  0.5194 0.6034525    
+income_grp_51 1     -0.01306937  0.27689310 -0.0472 0.9623538    
+income_grp_51 2      0.12200689  0.27398779  0.4453 0.6561026    
+driving_exp 1        0.01224797  0.00757910  1.6160 0.1060899    
+driving_exp 2        0.00952334  0.00687443  1.3853 0.1659519    
+hh_vehs 1            0.02437065  0.09921788  0.2456 0.8059705    
+hh_vehs 2            0.18310699  0.11002158  1.6643 0.0960560 .  
+mode_commute_31 1   -0.08367261  0.26404885 -0.3169 0.7513323    
+mode_commute_31 2   -0.34592974  0.22679263 -1.5253 0.1271811    
+mode_shopping_31 1   0.16203767  0.31725790  0.5107 0.6095301    
+mode_shopping_31 2   0.06425268  0.30165738  0.2130 0.8313278    
+mode_personal_31 1   0.03510880  0.30704059  0.1143 0.9089637    
+mode_personal_31 2   0.06799714  0.26096405  0.2606 0.7944308    
+mode_social_31 1     0.26604432  0.26460650  1.0054 0.3146880    
+mode_social_31 2     0.38344712  0.25620609  1.4966 0.1344881    
+citation_11 1       -0.16285108  0.14512057 -1.1222 0.2617869    
+citation_11 2       -0.06800890  0.14279324 -0.4763 0.6338782    
+crash_exp_11 1      -0.06613748  0.15594072 -0.4241 0.6714787    
+crash_exp_11 2      -0.20156454  0.14950444 -1.3482 0.1775884    
+rec_trips 1          0.03284904  0.03003023  1.0939 0.2740139    
+rec_trips 2         -0.00276925  0.03060694 -0.0905 0.9279075    
+time 1               0.02442979  0.00739083  3.3054 0.0009483 ***
+time 2               0.00786895  0.00753227  1.0447 0.2961625    
+cost 1              -0.00095398  0.00038465 -2.4802 0.0131325 *  
+cost 2              -0.00043035  0.00035586 -1.2093 0.2265392    
+veh_own_11 1        -0.35596244  0.24456047 -1.4555 0.1455256    
+veh_own_11 2        -0.22834844  0.22649024 -1.0082 0.3133564    
+veh_type_11 1        0.72707768  0.24510989  2.9663 0.0030137 ** 
+veh_type_11 2        0.25860077  0.24426426  1.0587 0.2897398    
+veh_type_21 1        0.40130073  0.23377491  1.7166 0.0860501 .  
+veh_type_21 2        0.23066185  0.23697030  0.9734 0.3303651    
+veh_type_31 1        0.51482753  0.29823689  1.7262 0.0843048 .  
+veh_type_31 2        0.03042549  0.28675859  0.1061 0.9155019    
+veh_feature_11 1    -0.06370653  0.17492322 -0.3642 0.7157108    
+veh_feature_21 1    -0.01019981  0.19010022 -0.0537 0.9572101    
+veh_feature_31 1    -0.00226830  0.13288286 -0.0171 0.9863808    
+veh_feature_41 1     0.04321646  0.17038673  0.2536 0.7997756    
+veh_feature_51 1     0.10548198  0.20574324  0.5127 0.6081700    
+veh_feature_61 1     0.33088134  0.17419590  1.8995 0.0575016 .  
+veh_feature_71 1    -0.03661388  0.15538947 -0.2356 0.8137225    
+companion_tot 1     -0.00609777  0.06979131 -0.0874 0.9303762    
+companion_tot 2      0.01600797  0.05805866  0.2757 0.7827626    
+companion_11 1       0.02746888  0.17870234  0.1537 0.8778360    
+companion_11 2      -0.04997667  0.17318040 -0.2886 0.7729016    
+companion_21 1      -0.04458557  0.20132606 -0.2215 0.8247347    
+companion_21 2       0.00764516  0.18496077  0.0413 0.9670297    
+companion_31 1       0.46841681  0.33579934  1.3949 0.1630367    
+companion_31 2       0.34276997  0.27987217  1.2247 0.2206741    
+companion_41 1       0.12776129  0.22641767  0.5643 0.5725686    
+companion_41 2       0.26187384  0.21502350  1.2179 0.2232678    
+companion_51 1       0.27157174  0.22455128  1.2094 0.2265102    
+companion_51 2       0.06299506  0.20776459  0.3032 0.7617344    
+per_drive_31 1       0.23193331  0.21569198  1.0753 0.2822410    
+per_drive_41 1      -0.43610388  0.23856690 -1.8280 0.0675473 .  
+per_drive_51 1      -0.45466857  0.19495992 -2.3321 0.0196947 *  
+trip_exp_11 1        0.06951119  0.15043272  0.4621 0.6440276    
+trip_exp_11 2       -0.11223912  0.13736780 -0.8171 0.4138883    
+trip_exp_31 1        0.20476213  0.23575391  0.8685 0.3850978    
+trip_exp_31 2        0.10343252  0.21071091  0.4909 0.6235155    
+trip_exp_41 1        0.16287719  0.14879709  1.0946 0.2736805    
+trip_exp_41 2        0.30595512  0.13798051  2.2174 0.0265972 *  
+av_usefulness 1      0.21605248  0.13196932  1.6371 0.1016008    
+av_concern 1         0.14448430  0.07787012  1.8555 0.0635317 .  
+tech_savviness 1    -0.09653349  0.12192185 -0.7918 0.4284975    
+tech_savviness 2     0.17922615  0.17655448  1.0151 0.3100428    
+driving_enjoyment 1 -0.25409356  0.18458164 -1.3766 0.1686385    
+driving_enjoyment 2 -0.00998989  0.18371161 -0.0544 0.9566339    
+polychronicity 1     0.23347998  0.10728270  2.1763 0.0295324 *  
+polychronicity 2    -0.04265267  0.10981519 -0.3884 0.6977170    
+envt_concern 1      -0.01862351  0.14375162 -0.1296 0.8969198    
+envt_concern 2       0.03258425  0.14302230  0.2278 0.8197813    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Error Structure:
+                         Estimate Std. Error z value  Pr(>|z|)    
+corr tba_g6_hv tba_g6_av 0.606702   0.066218  9.1622 < 2.2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+$call
+mvord(formula = MMO2(tba_g6_hv, tba_g6_av) ~ 0 + age_grp_2 + 
+    age_grp_3 + gender_1 + education_2 + education_3 + school_2 + 
+    school_3 + employment_2 + employment_3 + race_1 + hh_adult + 
+    hh_child + income_grp_2 + income_grp_3 + income_grp_4 + income_grp_5 + 
+    driving_exp + hh_vehs + mode_commute_3 + mode_shopping_3 + 
+    mode_personal_3 + mode_social_3 + citation_1 + crash_exp_1 + 
+    rec_trips + time + cost + veh_own_1 + veh_type_1 + veh_type_2 + 
+    veh_type_3 + veh_feature_1 + veh_feature_2 + veh_feature_3 + 
+    veh_feature_4 + veh_feature_5 + veh_feature_6 + veh_feature_7 + 
+    companion_tot + companion_1 + companion_2 + companion_3 + 
+    companion_4 + companion_5 + per_drive_3 + per_drive_4 + per_drive_5 + 
+    trip_exp_1 + trip_exp_3 + trip_exp_4 + av_usefulness + av_concern + 
+    tech_savviness + driving_enjoyment + polychronicity + envt_concern, 
+    data = df, link = mvprobit(), coef.constraints = cbind(c(1, 
+        2), c(1, 2), c(1, 2), c(1, 2), c(1, 2), c(1, 2), c(1, 
+        2), c(1, 2), c(1, 2), c(1, 2), c(1, 2), c(1, 2), c(1, 
+        2), c(1, 2), c(1, 2), c(1, 2), c(1, 2), c(1, 2), c(1, 
+        2), c(1, 2), c(1, 2), c(1, 2), c(1, 2), c(1, 2), c(1, 
+        2), c(1, 2), c(1, 2), c(1, 2), c(1, 2), c(1, 2), c(1, 
+        2), c(1, NA), c(1, NA), c(1, NA), c(1, NA), c(1, NA), 
+        c(1, NA), c(1, NA), c(1, 2), c(1, 2), c(1, 2), c(1, 2), 
+        c(1, 2), c(1, 2), c(1, NA), c(1, NA), c(1, NA), c(1, 
+            2), c(1, 2), c(1, 2), c(NA, 2), c(NA, 2), c(1, 2), 
+        c(1, 2), c(1, 2), c(1, 2)), threshold.constraints = c(1:2), 
+    control = mvord.control(solver = "nlminb"))
+
+$formula
+MMO2(tba_g6_hv, tba_g6_av) ~ 0 + age_grp_2 + age_grp_3 + gender_1 + 
+    education_2 + education_3 + school_2 + school_3 + employment_2 + 
+    employment_3 + race_1 + hh_adult + hh_child + income_grp_2 + 
+    income_grp_3 + income_grp_4 + income_grp_5 + driving_exp + 
+    hh_vehs + mode_commute_3 + mode_shopping_3 + mode_personal_3 + 
+    mode_social_3 + citation_1 + crash_exp_1 + rec_trips + time + 
+    cost + veh_own_1 + veh_type_1 + veh_type_2 + veh_type_3 + 
+    veh_feature_1 + veh_feature_2 + veh_feature_3 + veh_feature_4 + 
+    veh_feature_5 + veh_feature_6 + veh_feature_7 + companion_tot + 
+    companion_1 + companion_2 + companion_3 + companion_4 + companion_5 + 
+    per_drive_3 + per_drive_4 + per_drive_5 + trip_exp_1 + trip_exp_3 + 
+    trip_exp_4 + av_usefulness + av_concern + tech_savviness + 
+    driving_enjoyment + polychronicity + envt_concern
+
+$info
+      c("link", object$rho$link$name) c("threshold", object$rho$threshold)
+                                 link                            threshold
+value                        mvprobit                             flexible
+      c("nsubjects", object$rho$n) c("ndim", object$rho$ndim)
+                         nsubjects                       ndim
+value                          696                          2
+      c("logPL", round(-object$rho$objective, 2))
+                                            logPL
+value                                     -719.08
+      c("CLAIC", ifelse(object$rho$se, round(object$rho$claic, 2), 
+                                                              CLAIC
+value                                                       1679.95
+      c("CLBIC", ifelse(object$rho$se, round(object$rho$clbic, 2), 
+                                                              CLBIC
+value                                                       2229.44
+      c("fevals", if (is.null(object$rho$optRes$fevals)) NA else object$rho$optRes$fevals)
+                                                                                    fevals
+value                                                                                  170
+
+$thresholds
+                Estimate Std. Error   z value  Pr(>|z|)
+tba_g6_hv 0|1 0.19589139  0.5614448 0.3489059 0.7271600
+tba_g6_av 0|1 0.08186437  0.5429272 0.1507833 0.8801466
+
+$coefficients
+                         Estimate   Std. Error     z value     Pr(>|z|)
+age_grp_21 1        -0.4288028174 0.1957419888 -2.19065322 0.0284768970
+age_grp_21 2        -0.5067952159 0.1910309148 -2.65294869 0.0079791998
+age_grp_31 1        -0.4261664142 0.3672026824 -1.16057544 0.2458145986
+age_grp_31 2        -0.3251531009 0.3452309261 -0.94184233 0.3462733680
+gender_11 1          0.1236606525 0.1428945427  0.86539801 0.3868203746
+gender_11 2          0.0883003462 0.1299654649  0.67941392 0.4968756314
+education_21 1      -0.1665973157 0.1618463045 -1.02935508 0.3033128493
+education_21 2      -0.0682186709 0.1660295722 -0.41088265 0.6811585838
+education_31 1      -0.6585883925 0.2380697240 -2.76636769 0.0056684582
+education_31 2      -0.2775307896 0.2348575043 -1.18169862 0.2373253045
+school_21 1         -0.4885812058 0.2663505372 -1.83435412 0.0666014451
+school_21 2          0.0149076464 0.3001995269  0.04965913 0.9603940282
+school_31 1         -0.2502838417 0.1823656230 -1.37242885 0.1699299751
+school_31 2         -0.4317592303 0.1760302680 -2.45275563 0.0141766612
+employment_21 1     -0.0765052684 0.2524355557 -0.30306851 0.7618376497
+employment_21 2     -0.0788134432 0.2363404162 -0.33347425 0.7387763233
+employment_31 1      0.2506513374 0.1980717582  1.26545722 0.2057074729
+employment_31 2      0.1534837570 0.1896299955  0.80938544 0.4182934754
+race_11 1           -0.2605798067 0.2080130083 -1.25270919 0.2103115612
+race_11 2            0.1125310724 0.1817128838  0.61927955 0.5357322158
+hh_adult 1           0.0412639067 0.0789466934  0.52268062 0.6011965262
+hh_adult 2           0.0534753215 0.0757453630  0.70598806 0.4801955657
+hh_child 1          -0.0812404319 0.0875756705 -0.92765983 0.3535840502
+hh_child 2          -0.0782200995 0.0820643749 -0.95315537 0.3405113555
+income_grp_21 1      0.0673169390 0.2190159447  0.30736090 0.7585686822
+income_grp_21 2      0.0109072997 0.2093197032  0.05210833 0.9584423774
+income_grp_31 1      0.1174927896 0.2407161462  0.48809684 0.6254812514
+income_grp_31 2      0.0580444054 0.2434337806  0.23844022 0.8115396719
+income_grp_41 1      0.2538341701 0.2868304423  0.88496245 0.3761768856
+income_grp_41 2      0.1371849383 0.2641005433  0.51944209 0.6034524861
+income_grp_51 1     -0.0130693711 0.2768931039 -0.04720006 0.9623537796
+income_grp_51 2      0.1220068942 0.2739877907  0.44530048 0.6561026224
+driving_exp 1        0.0122479742 0.0075790957  1.61602053 0.1060898756
+driving_exp 2        0.0095233442 0.0068744276  1.38532905 0.1659518738
+hh_vehs 1            0.0243706469 0.0992178772  0.24562758 0.8059705386
+hh_vehs 2            0.1831069855 0.1100215785  1.66428248 0.0960559920
+mode_commute_31 1   -0.0836726075 0.2640488503 -0.31688306 0.7513323369
+mode_commute_31 2   -0.3459297401 0.2267926313 -1.52531296 0.1271810564
+mode_shopping_31 1   0.1620376716 0.3172578986  0.51074433 0.6095300980
+mode_shopping_31 2   0.0642526848 0.3016573801  0.21299888 0.8313278345
+mode_personal_31 1   0.0351087977 0.3070405872  0.11434579 0.9089636874
+mode_personal_31 2   0.0679971416 0.2609640505  0.26056134 0.7944308095
+mode_social_31 1     0.2660443236 0.2646065027  1.00543381 0.3146880074
+mode_social_31 2     0.3834471159 0.2562060911  1.49663544 0.1344881433
+citation_11 1       -0.1628510825 0.1451205733 -1.12217778 0.2617868590
+citation_11 2       -0.0680088981 0.1427932412 -0.47627533 0.6338782386
+crash_exp_11 1      -0.0661374831 0.1559407180 -0.42411940 0.6714787408
+crash_exp_11 2      -0.2015645392 0.1495044435 -1.34821771 0.1775883685
+rec_trips 1          0.0328490414 0.0300302320  1.09386572 0.2740138749
+rec_trips 2         -0.0027692499 0.0306069389 -0.09047785 0.9279074971
+time 1               0.0244297879 0.0073908312  3.30541819 0.0009483478
+time 2               0.0078689528 0.0075322735  1.04469824 0.2961624579
+cost 1              -0.0009539810 0.0003846458 -2.48015465 0.0131325410
+cost 2              -0.0004303527 0.0003558628 -1.20932190 0.2265392023
+veh_own_11 1        -0.3559624431 0.2445604738 -1.45551911 0.1455256037
+veh_own_11 2        -0.2283484405 0.2264902411 -1.00820432 0.3133563823
+veh_type_11 1        0.7270776762 0.2451098921  2.96633347 0.0030137352
+veh_type_11 2        0.2586007665 0.2442642596  1.05869261 0.2897397947
+veh_type_21 1        0.4013007303 0.2337749059  1.71661166 0.0860501498
+veh_type_21 2        0.2306618458 0.2369702984  0.97337872 0.3303651112
+veh_type_31 1        0.5148275253 0.2982368862  1.72623693 0.0843047976
+veh_type_31 2        0.0304254859 0.2867585863  0.10610139 0.9155019047
+veh_feature_11 1    -0.0637065270 0.1749232220 -0.36419708 0.7157108459
+veh_feature_21 1    -0.0101998149 0.1901002188 -0.05365493 0.9572100878
+veh_feature_31 1    -0.0022683036 0.1328828580 -0.01706995 0.9863808124
+veh_feature_41 1     0.0432164634 0.1703867321  0.25363749 0.7997756292
+veh_feature_51 1     0.1054819783 0.2057432424  0.51268745 0.6081699700
+veh_feature_61 1     0.3308813354 0.1741958985  1.89947834 0.0575016124
+veh_feature_71 1    -0.0366138802 0.1553894661 -0.23562653 0.8137224876
+companion_tot 1     -0.0060977735 0.0697913142 -0.08737152 0.9303762036
+companion_tot 2      0.0160079726 0.0580586589  0.27572067 0.7827626150
+companion_11 1       0.0274688778 0.1787023395  0.15371303 0.8778360115
+companion_11 2      -0.0499766651 0.1731804024 -0.28858153 0.7729016330
+companion_21 1      -0.0445855653 0.2013260594 -0.22145948 0.8247346803
+companion_21 2       0.0076451552 0.1849607711  0.04133393 0.9670296857
+companion_31 1       0.4684168067 0.3357993420  1.39493069 0.1630367423
+companion_31 2       0.3427699746 0.2798721732  1.22473760 0.2206741012
+companion_41 1       0.1277612850 0.2264176683  0.56427259 0.5725686298
+companion_41 2       0.2618738370 0.2150235009  1.21788472 0.2232677820
+companion_51 1       0.2715717402 0.2245512750  1.20939745 0.2265101864
+companion_51 2       0.0629950568 0.2077645898  0.30320401 0.7617343931
+per_drive_31 1       0.2319333123 0.2156919754  1.07529875 0.2822409940
+per_drive_41 1      -0.4361038799 0.2385668973 -1.82801506 0.0675472922
+per_drive_51 1      -0.4546685677 0.1949599218 -2.33211300 0.0196947474
+trip_exp_11 1        0.0695111883 0.1504327246  0.46207491 0.6440275991
+trip_exp_11 2       -0.1122391249 0.1373677959 -0.81707014 0.4138883431
+trip_exp_31 1        0.2047621289 0.2357539095  0.86854182 0.3850977904
+trip_exp_31 2        0.1034325150 0.2107109057  0.49087405 0.6235155342
+trip_exp_41 1        0.1628771858 0.1487970920  1.09462614 0.2736804608
+trip_exp_41 2        0.3059551184 0.1379805084  2.21737927 0.0265971853
+av_usefulness 1      0.2160524809 0.1319693163  1.63714178 0.1016008493
+av_concern 1         0.1444843039 0.0778701218  1.85545239 0.0635316513
+tech_savviness 1    -0.0965334915 0.1219218509 -0.79176531 0.4284975357
+tech_savviness 2     0.1792261485 0.1765544756  1.01513229 0.3100427730
+driving_enjoyment 1 -0.2540935619 0.1845816380 -1.37659176 0.1686385000
+driving_enjoyment 2 -0.0099898923 0.1837116084 -0.05437812 0.9566339088
+polychronicity 1     0.2334799789 0.1072827049  2.17630586 0.0295323980
+polychronicity 2    -0.0426526669 0.1098151930 -0.38840406 0.6977170395
+envt_concern 1      -0.0186235089 0.1437516157 -0.12955339 0.8969197828
+envt_concern 2       0.0325842463 0.1430223039  0.22782633 0.8197812583
+
+$error.structure
+                          Estimate Std. Error  z value     Pr(>|z|)
+corr tba_g6_hv tba_g6_av 0.6067019 0.06621785 9.162211 5.084464e-20
+
+attr(,"class")
+[1] "summary.mvord"
+
+Call: mvord(formula = MMO2(tba_g6_hv, tba_g6_av) ~ 0, data = df, link = mvprobit(), 
+    coef.constraints = c(1:2), threshold.constraints = c(1:2), 
+    control = mvord.control(solver = "nlminb"))
+
+Formula: MMO2(tba_g6_hv, tba_g6_av) ~ 0
+
+    link threshold nsubjects ndim   logPL   CLAIC   CLBIC fevals
+mvprobit  flexible       696    2 -856.53 1719.09 1732.79     23
+
+Thresholds:
+               Estimate Std. Error z value  Pr(>|z|)    
+tba_g6_hv 0|1 -0.288468   0.048336 -5.9679 2.403e-09 ***
+tba_g6_av 0|1 -0.411053   0.049100 -8.3717 < 2.2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Coefficients:
+     Estimate Std. Error z value Pr(>|z|)
+
+Error Structure:
+                         Estimate Std. Error z value  Pr(>|z|)    
+corr tba_g6_hv tba_g6_av 0.591747   0.045698  12.949 < 2.2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+$call
+mvord(formula = MMO2(tba_g6_hv, tba_g6_av) ~ 0, data = df, link = mvprobit(), 
+    coef.constraints = c(1:2), threshold.constraints = c(1:2), 
+    control = mvord.control(solver = "nlminb"))
+
+$formula
+MMO2(tba_g6_hv, tba_g6_av) ~ 0
+
+$info
+      c("link", object$rho$link$name) c("threshold", object$rho$threshold)
+                                 link                            threshold
+value                        mvprobit                             flexible
+      c("nsubjects", object$rho$n) c("ndim", object$rho$ndim)
+                         nsubjects                       ndim
+value                          696                          2
+      c("logPL", round(-object$rho$objective, 2))
+                                            logPL
+value                                     -856.53
+      c("CLAIC", ifelse(object$rho$se, round(object$rho$claic, 2), 
+                                                              CLAIC
+value                                                       1719.09
+      c("CLBIC", ifelse(object$rho$se, round(object$rho$clbic, 2), 
+                                                              CLBIC
+value                                                       1732.79
+      c("fevals", if (is.null(object$rho$optRes$fevals)) NA else object$rho$optRes$fevals)
+                                                                                    fevals
+value                                                                                   23
+
+$thresholds
+                Estimate Std. Error   z value     Pr(>|z|)
+tba_g6_hv 0|1 -0.2884684 0.04833634 -5.967941 2.402661e-09
+tba_g6_av 0|1 -0.4110525 0.04910035 -8.371683 5.680125e-17
+
+$coefficients
+[1] Estimate   Std. Error z value    Pr(>|z|)  
+<0 rows> (or 0-length row.names)
+
+$error.structure
+                          Estimate Std. Error  z value     Pr(>|z|)
+corr tba_g6_hv tba_g6_av 0.5917474 0.04569842 12.94897 2.381322e-38
+
+attr(,"class")
+[1] "summary.mvord"

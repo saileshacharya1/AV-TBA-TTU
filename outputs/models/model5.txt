@@ -1,0 +1,335 @@
+
+Call: mvord(formula = MMO2(tba_g1_hv, tba_g1_av) ~ 0 + age_grp_2 + 
+    age_grp_3 + gender_1 + education_2 + education_3 + school_2 + 
+    school_3 + employment_2 + employment_3 + race_1 + hh_adult + 
+    hh_child + income_grp_2 + income_grp_3 + income_grp_4 + income_grp_5 + 
+    driving_exp + hh_vehs + mode_commute_3 + mode_shopping_3 + 
+    mode_personal_3 + mode_social_3 + citation_1 + crash_exp_1 + 
+    rec_trips + time + cost + veh_own_1 + veh_type_1 + veh_type_2 + 
+    veh_type_3 + veh_feature_1 + veh_feature_2 + veh_feature_3 + 
+    veh_feature_4 + veh_feature_5 + veh_feature_6 + veh_feature_7 + 
+    companion_tot + companion_1 + companion_2 + companion_3 + 
+    companion_4 + companion_5 + per_drive_3 + per_drive_4 + per_drive_5 + 
+    trip_exp_1 + trip_exp_3 + trip_exp_4 + av_usefulness + av_concern + 
+    tech_savviness + driving_enjoyment + polychronicity + envt_concern, 
+    data = df, link = mvprobit(), coef.constraints = cbind(c(1, 
+        2), c(1, 2), c(1, 2), c(1, 2), c(1, 2), c(1, 2), c(1, 
+        2), c(1, 2), c(1, 2), c(1, 2), c(1, 2), c(1, 2), c(1, 
+        2), c(1, 2), c(1, 2), c(1, 2), c(1, 2), c(1, 2), c(1, 
+        2), c(1, 2), c(1, 2), c(1, 2), c(1, 2), c(1, 2), c(1, 
+        2), c(1, 2), c(1, 2), c(1, 2), c(1, 2), c(1, 2), c(1, 
+        2), c(1, NA), c(1, NA), c(1, NA), c(1, NA), c(1, NA), 
+        c(1, NA), c(1, NA), c(1, 2), c(1, 2), c(1, 2), c(1, 2), 
+        c(1, 2), c(1, 2), c(1, NA), c(1, NA), c(1, NA), c(1, 
+            2), c(1, 2), c(1, 2), c(NA, 2), c(NA, 2), c(1, 2), 
+        c(1, 2), c(1, 2), c(1, 2)), threshold.constraints = c(1:2), 
+    control = mvord.control(solver = "nlminb"))
+
+Formula: MMO2(tba_g1_hv, tba_g1_av) ~ 0 + age_grp_2 + age_grp_3 + gender_1 + 
+    education_2 + education_3 + school_2 + school_3 + employment_2 + 
+    employment_3 + race_1 + hh_adult + hh_child + income_grp_2 + 
+    income_grp_3 + income_grp_4 + income_grp_5 + driving_exp + 
+    hh_vehs + mode_commute_3 + mode_shopping_3 + mode_personal_3 + 
+    mode_social_3 + citation_1 + crash_exp_1 + rec_trips + time + 
+    cost + veh_own_1 + veh_type_1 + veh_type_2 + veh_type_3 + 
+    veh_feature_1 + veh_feature_2 + veh_feature_3 + veh_feature_4 + 
+    veh_feature_5 + veh_feature_6 + veh_feature_7 + companion_tot + 
+    companion_1 + companion_2 + companion_3 + companion_4 + companion_5 + 
+    per_drive_3 + per_drive_4 + per_drive_5 + trip_exp_1 + trip_exp_3 + 
+    trip_exp_4 + av_usefulness + av_concern + tech_savviness + 
+    driving_enjoyment + polychronicity + envt_concern
+
+    link threshold nsubjects ndim   logPL   CLAIC   CLBIC fevals
+mvprobit  flexible       696    2 -657.45 1556.68 2106.17    168
+
+Thresholds:
+              Estimate Std. Error z value Pr(>|z|)
+tba_g1_hv 0|1  0.38362    0.56911  0.6741   0.5003
+tba_g1_av 0|1  0.62772    0.50069  1.2537   0.2099
+
+Coefficients:
+                       Estimate  Std. Error z value  Pr(>|z|)    
+age_grp_21 1        -2.3063e-01  1.9521e-01 -1.1814  0.237428    
+age_grp_21 2        -1.2860e-01  1.7529e-01 -0.7337  0.463149    
+age_grp_31 1        -6.6493e-01  4.2147e-01 -1.5777  0.114644    
+age_grp_31 2        -1.0728e-01  3.5276e-01 -0.3041  0.761032    
+gender_11 1          7.6193e-02  1.7580e-01  0.4334  0.664717    
+gender_11 2         -2.3591e-02  1.3244e-01 -0.1781  0.858625    
+education_21 1      -1.7229e-01  1.9203e-01 -0.8972  0.369614    
+education_21 2       1.7850e-01  1.5841e-01  1.1268  0.259838    
+education_31 1      -4.1443e-01  2.7762e-01 -1.4928  0.135492    
+education_31 2      -4.0335e-02  2.2043e-01 -0.1830  0.854813    
+school_21 1          7.6573e-02  3.2716e-01  0.2341  0.814941    
+school_21 2         -1.0234e-01  2.6347e-01 -0.3884  0.697692    
+school_31 1         -9.4274e-02  1.8370e-01 -0.5132  0.607823    
+school_31 2         -3.0566e-02  1.5798e-01 -0.1935  0.846586    
+employment_21 1      2.4275e-01  2.6521e-01  0.9153  0.360037    
+employment_21 2     -1.2536e-01  2.2883e-01 -0.5478  0.583827    
+employment_31 1      2.4836e-02  2.0996e-01  0.1183  0.905840    
+employment_31 2      1.3861e-02  1.8094e-01  0.0766  0.938938    
+race_11 1            9.6234e-02  2.1638e-01  0.4447  0.656504    
+race_11 2            2.0855e-01  1.8104e-01  1.1519  0.249356    
+hh_adult 1           2.0753e-02  7.8207e-02  0.2654  0.790733    
+hh_adult 2           1.6232e-01  6.7974e-02  2.3879  0.016944 *  
+hh_child 1           1.1416e-01  9.4031e-02  1.2141  0.224722    
+hh_child 2           5.3672e-02  8.1602e-02  0.6577  0.510711    
+income_grp_21 1     -2.2857e-01  2.6146e-01 -0.8742  0.382009    
+income_grp_21 2     -4.0160e-01  2.0460e-01 -1.9629  0.049657 *  
+income_grp_31 1      1.3944e-01  2.7547e-01  0.5062  0.612715    
+income_grp_31 2     -4.1581e-01  2.2546e-01 -1.8443  0.065139 .  
+income_grp_41 1     -6.3377e-03  3.1667e-01 -0.0200  0.984032    
+income_grp_41 2     -3.8141e-01  2.5643e-01 -1.4874  0.136906    
+income_grp_51 1     -2.0885e-01  3.1988e-01 -0.6529  0.513817    
+income_grp_51 2     -5.2821e-01  2.6543e-01 -1.9900  0.046586 *  
+driving_exp 1       -5.3389e-03  8.1905e-03 -0.6518  0.514508    
+driving_exp 2       -1.4327e-02  7.2759e-03 -1.9691  0.048947 *  
+hh_vehs 1           -3.3358e-02  1.0770e-01 -0.3097  0.756763    
+hh_vehs 2           -9.8281e-02  8.9740e-02 -1.0952  0.273445    
+mode_commute_31 1    8.0458e-02  2.4726e-01  0.3254  0.744882    
+mode_commute_31 2   -1.1356e-01  2.0543e-01 -0.5528  0.580387    
+mode_shopping_31 1   2.3691e-01  3.1039e-01  0.7632  0.445319    
+mode_shopping_31 2   2.9735e-01  3.0765e-01  0.9665  0.333782    
+mode_personal_31 1   5.7602e-04  3.1072e-01  0.0019  0.998521    
+mode_personal_31 2  -1.0584e-01  2.3213e-01 -0.4560  0.648405    
+mode_social_31 1    -4.6562e-01  2.6694e-01 -1.7443  0.081108 .  
+mode_social_31 2     1.3389e-01  2.2212e-01  0.6028  0.546666    
+citation_11 1        4.1121e-02  1.6640e-01  0.2471  0.804819    
+citation_11 2       -1.3040e-01  1.4217e-01 -0.9172  0.359012    
+crash_exp_11 1      -1.3369e-02  1.6897e-01 -0.0791  0.936939    
+crash_exp_11 2       2.3912e-02  1.4980e-01  0.1596  0.873174    
+rec_trips 1          2.0974e-02  3.7905e-02  0.5533  0.580047    
+rec_trips 2          5.7130e-02  3.1425e-02  1.8180  0.069064 .  
+time 1               2.1430e-04  6.2348e-03  0.0344  0.972581    
+time 2               8.3731e-03  5.7892e-03  1.4463  0.148088    
+cost 1              -2.4670e-04  4.2985e-04 -0.5739  0.566033    
+cost 2              -5.9241e-05  3.1873e-04 -0.1859  0.852550    
+veh_own_11 1         1.2707e-01  2.1941e-01  0.5792  0.562485    
+veh_own_11 2         8.2090e-02  2.2215e-01  0.3695  0.711739    
+veh_type_11 1       -1.3344e-03  2.6480e-01 -0.0050  0.995979    
+veh_type_11 2       -2.8695e-02  2.4262e-01 -0.1183  0.905852    
+veh_type_21 1        7.9118e-03  2.5384e-01  0.0312  0.975135    
+veh_type_21 2        1.3323e-01  2.3695e-01  0.5623  0.573928    
+veh_type_31 1       -3.5071e-01  3.8926e-01 -0.9010  0.367607    
+veh_type_31 2       -1.3461e-01  2.9089e-01 -0.4627  0.643553    
+veh_feature_11 1    -2.3934e-02  1.8636e-01 -0.1284  0.897812    
+veh_feature_21 1    -1.0922e-01  1.9449e-01 -0.5616  0.574422    
+veh_feature_31 1     1.7441e-01  1.5381e-01  1.1339  0.256834    
+veh_feature_41 1     1.1804e-01  1.6824e-01  0.7016  0.482930    
+veh_feature_51 1    -7.3683e-02  1.9544e-01 -0.3770  0.706161    
+veh_feature_61 1     1.6382e-01  1.8104e-01  0.9049  0.365517    
+veh_feature_71 1     2.6149e-01  1.7065e-01  1.5323  0.125450    
+companion_tot 1     -5.9271e-02  7.5238e-02 -0.7878  0.430828    
+companion_tot 2     -5.6603e-02  6.4820e-02 -0.8732  0.382539    
+companion_11 1       1.5156e-01  2.2430e-01  0.6757  0.499218    
+companion_11 2      -3.0374e-02  1.7417e-01 -0.1744  0.861557    
+companion_21 1       3.8541e-01  2.1884e-01  1.7611  0.078217 .  
+companion_21 2       3.1952e-01  1.9343e-01  1.6519  0.098555 .  
+companion_31 1      -1.1721e-01  2.9608e-01 -0.3959  0.692211    
+companion_31 2       1.7675e-01  2.7813e-01  0.6355  0.525116    
+companion_41 1       1.4992e-03  2.7480e-01  0.0055  0.995647    
+companion_41 2       3.6571e-01  2.1448e-01  1.7051  0.088167 .  
+companion_51 1      -2.8799e-02  2.3314e-01 -0.1235  0.901689    
+companion_51 2       2.7664e-01  2.0649e-01  1.3398  0.180325    
+per_drive_31 1      -1.2347e-01  1.7658e-01 -0.6992  0.484409    
+per_drive_41 1      -5.4271e-01  2.1957e-01 -2.4717  0.013446 *  
+per_drive_51 1      -1.2426e+00  2.3082e-01 -5.3834 7.307e-08 ***
+trip_exp_11 1        1.9474e-01  1.5829e-01  1.2303  0.218575    
+trip_exp_11 2       -2.1967e-02  1.3698e-01 -0.1604  0.872591    
+trip_exp_31 1       -6.6704e-02  2.1915e-01 -0.3044  0.760841    
+trip_exp_31 2        2.0744e-01  1.8506e-01  1.1210  0.262301    
+trip_exp_41 1        1.2935e-01  1.6774e-01  0.7712  0.440602    
+trip_exp_41 2        3.2110e-01  1.3903e-01  2.3095  0.020918 *  
+av_usefulness 1      4.7003e-01  1.4796e-01  3.1767  0.001489 ** 
+av_concern 1         1.5929e-01  8.4863e-02  1.8770  0.060519 .  
+tech_savviness 1    -5.5881e-02  1.4492e-01 -0.3856  0.699785    
+tech_savviness 2    -1.7600e-01  1.9061e-01 -0.9234  0.355807    
+driving_enjoyment 1 -3.2924e-02  1.8372e-01 -0.1792  0.857772    
+driving_enjoyment 2  8.2823e-02  1.7595e-01  0.4707  0.637848    
+polychronicity 1     2.3139e-01  1.3404e-01  1.7263  0.084290 .  
+polychronicity 2     1.9970e-01  1.1370e-01  1.7563  0.079030 .  
+envt_concern 1       1.0940e-01  1.7144e-01  0.6381  0.523400    
+envt_concern 2       1.5682e-01  1.3922e-01  1.1265  0.259964    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Error Structure:
+                         Estimate Std. Error z value  Pr(>|z|)    
+corr tba_g1_hv tba_g1_av  0.67524    0.07433  9.0844 < 2.2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+$call
+mvord(formula = MMO2(tba_g1_hv, tba_g1_av) ~ 0 + age_grp_2 + 
+    age_grp_3 + gender_1 + education_2 + education_3 + school_2 + 
+    school_3 + employment_2 + employment_3 + race_1 + hh_adult + 
+    hh_child + income_grp_2 + income_grp_3 + income_grp_4 + income_grp_5 + 
+    driving_exp + hh_vehs + mode_commute_3 + mode_shopping_3 + 
+    mode_personal_3 + mode_social_3 + citation_1 + crash_exp_1 + 
+    rec_trips + time + cost + veh_own_1 + veh_type_1 + veh_type_2 + 
+    veh_type_3 + veh_feature_1 + veh_feature_2 + veh_feature_3 + 
+    veh_feature_4 + veh_feature_5 + veh_feature_6 + veh_feature_7 + 
+    companion_tot + companion_1 + companion_2 + companion_3 + 
+    companion_4 + companion_5 + per_drive_3 + per_drive_4 + per_drive_5 + 
+    trip_exp_1 + trip_exp_3 + trip_exp_4 + av_usefulness + av_concern + 
+    tech_savviness + driving_enjoyment + polychronicity + envt_concern, 
+    data = df, link = mvprobit(), coef.constraints = cbind(c(1, 
+        2), c(1, 2), c(1, 2), c(1, 2), c(1, 2), c(1, 2), c(1, 
+        2), c(1, 2), c(1, 2), c(1, 2), c(1, 2), c(1, 2), c(1, 
+        2), c(1, 2), c(1, 2), c(1, 2), c(1, 2), c(1, 2), c(1, 
+        2), c(1, 2), c(1, 2), c(1, 2), c(1, 2), c(1, 2), c(1, 
+        2), c(1, 2), c(1, 2), c(1, 2), c(1, 2), c(1, 2), c(1, 
+        2), c(1, NA), c(1, NA), c(1, NA), c(1, NA), c(1, NA), 
+        c(1, NA), c(1, NA), c(1, 2), c(1, 2), c(1, 2), c(1, 2), 
+        c(1, 2), c(1, 2), c(1, NA), c(1, NA), c(1, NA), c(1, 
+            2), c(1, 2), c(1, 2), c(NA, 2), c(NA, 2), c(1, 2), 
+        c(1, 2), c(1, 2), c(1, 2)), threshold.constraints = c(1:2), 
+    control = mvord.control(solver = "nlminb"))
+
+$formula
+MMO2(tba_g1_hv, tba_g1_av) ~ 0 + age_grp_2 + age_grp_3 + gender_1 + 
+    education_2 + education_3 + school_2 + school_3 + employment_2 + 
+    employment_3 + race_1 + hh_adult + hh_child + income_grp_2 + 
+    income_grp_3 + income_grp_4 + income_grp_5 + driving_exp + 
+    hh_vehs + mode_commute_3 + mode_shopping_3 + mode_personal_3 + 
+    mode_social_3 + citation_1 + crash_exp_1 + rec_trips + time + 
+    cost + veh_own_1 + veh_type_1 + veh_type_2 + veh_type_3 + 
+    veh_feature_1 + veh_feature_2 + veh_feature_3 + veh_feature_4 + 
+    veh_feature_5 + veh_feature_6 + veh_feature_7 + companion_tot + 
+    companion_1 + companion_2 + companion_3 + companion_4 + companion_5 + 
+    per_drive_3 + per_drive_4 + per_drive_5 + trip_exp_1 + trip_exp_3 + 
+    trip_exp_4 + av_usefulness + av_concern + tech_savviness + 
+    driving_enjoyment + polychronicity + envt_concern
+
+$info
+      c("link", object$rho$link$name) c("threshold", object$rho$threshold)
+                                 link                            threshold
+value                        mvprobit                             flexible
+      c("nsubjects", object$rho$n) c("ndim", object$rho$ndim)
+                         nsubjects                       ndim
+value                          696                          2
+      c("logPL", round(-object$rho$objective, 2))
+                                            logPL
+value                                     -657.45
+      c("CLAIC", ifelse(object$rho$se, round(object$rho$claic, 2), 
+                                                              CLAIC
+value                                                       1556.68
+      c("CLBIC", ifelse(object$rho$se, round(object$rho$clbic, 2), 
+                                                              CLBIC
+value                                                       2106.17
+      c("fevals", if (is.null(object$rho$optRes$fevals)) NA else object$rho$optRes$fevals)
+                                                                                    fevals
+value                                                                                  168
+
+$thresholds
+               Estimate Std. Error   z value  Pr(>|z|)
+tba_g1_hv 0|1 0.3836235  0.5691127 0.6740729 0.5002649
+tba_g1_av 0|1 0.6277198  0.5006920 1.2537043 0.2099495
+
+$coefficients
+                         Estimate   Std. Error      z value     Pr(>|z|)
+age_grp_21 1        -2.306290e-01 0.1952102726 -1.181438835 2.374284e-01
+age_grp_21 2        -1.286021e-01 0.1752858415 -0.733670893 4.631493e-01
+age_grp_31 1        -6.649287e-01 0.4214651378 -1.577660059 1.146437e-01
+age_grp_31 2        -1.072840e-01 0.3527623592 -0.304125502 7.610323e-01
+gender_11 1          7.619261e-02 0.1757981284  0.433409665 6.647172e-01
+gender_11 2         -2.359133e-02 0.1324426236 -0.178124936 8.586249e-01
+education_21 1      -1.722858e-01 0.1920266725 -0.897197201 3.696137e-01
+education_21 2       1.784968e-01 0.1584138983  1.126774590 2.598378e-01
+education_31 1      -4.144299e-01 0.2776211998 -1.492789118 1.354924e-01
+education_31 2      -4.033477e-02 0.2204319627 -0.182980568 8.548133e-01
+school_21 1          7.657307e-02 0.3271567023  0.234056242 8.149413e-01
+school_21 2         -1.023425e-01 0.2634719180 -0.388438086 6.976919e-01
+school_31 1         -9.427366e-02 0.1837036915 -0.513183271 6.078231e-01
+school_31 2         -3.056575e-02 0.1579823610 -0.193475729 8.465864e-01
+employment_21 1      2.427452e-01 0.2652099345  0.915294565 3.600370e-01
+employment_21 2     -1.253562e-01 0.2288342071 -0.547803598 5.838268e-01
+employment_31 1      2.483573e-02 0.2099612149  0.118287238 9.058401e-01
+employment_31 2      1.386078e-02 0.1809395978  0.076604433 9.389382e-01
+race_11 1            9.623380e-02 0.2163795841  0.444745282 6.565038e-01
+race_11 2            2.085455e-01 0.1810425321  1.151914353 2.493563e-01
+hh_adult 1           2.075276e-02 0.0782065054  0.265358484 7.907333e-01
+hh_adult 2           1.623171e-01 0.0679740722  2.387927109 1.694370e-02
+hh_child 1           1.141600e-01 0.0940310514  1.214066751 2.247222e-01
+hh_child 2           5.367204e-02 0.0816018284  0.657730831 5.107111e-01
+income_grp_21 1     -2.285673e-01 0.2614587805 -0.874200057 3.820093e-01
+income_grp_21 2     -4.016016e-01 0.2045956298 -1.962904059 4.965732e-02
+income_grp_31 1      1.394431e-01 0.2754691777  0.506202322 6.127146e-01
+income_grp_31 2     -4.158131e-01 0.2254583820 -1.844301081 6.513927e-02
+income_grp_41 1     -6.337686e-03 0.3166667595 -0.020013739 9.840324e-01
+income_grp_41 2     -3.814110e-01 0.2564256862 -1.487413512 1.369056e-01
+income_grp_51 1     -2.088515e-01 0.3198796081 -0.652906482 5.138166e-01
+income_grp_51 2     -5.282136e-01 0.2654284327 -1.990041437 4.658637e-02
+driving_exp 1       -5.338855e-03 0.0081905128 -0.651834026 5.145082e-01
+driving_exp 2       -1.432656e-02 0.0072758571 -1.969055103 4.894676e-02
+hh_vehs 1           -3.335755e-02 0.1076972489 -0.309734444 7.567629e-01
+hh_vehs 2           -9.828057e-02 0.0897404830 -1.095164222 2.734447e-01
+mode_commute_31 1    8.045850e-02 0.2472638229  0.325395347 7.448819e-01
+mode_commute_31 2   -1.135649e-01 0.2054284145 -0.552819654 5.803869e-01
+mode_shopping_31 1   2.369060e-01 0.3103941996  0.763242380 4.453189e-01
+mode_shopping_31 2   2.973549e-01 0.3076540571  0.966523484 3.337823e-01
+mode_personal_31 1   5.760192e-04 0.3107154532  0.001853848 9.985208e-01
+mode_personal_31 2  -1.058448e-01 0.2321261897 -0.455979495 6.484047e-01
+mode_social_31 1    -4.656208e-01 0.2669392209 -1.744295131 8.110764e-02
+mode_social_31 2     1.338855e-01 0.2221194548  0.602763587 5.466660e-01
+citation_11 1        4.112082e-02 0.1664035671  0.247115019 8.048192e-01
+citation_11 2       -1.304010e-01 0.1421653143 -0.917248891 3.590122e-01
+crash_exp_11 1      -1.336896e-02 0.1689749794 -0.079118009 9.369388e-01
+crash_exp_11 2       2.391240e-02 0.1498006386  0.159628134 8.731740e-01
+rec_trips 1          2.097350e-02 0.0379051089  0.553315980 5.800471e-01
+rec_trips 2          5.713001e-02 0.0314246725  1.817998605 6.906435e-02
+time 1               2.143005e-04 0.0062348201  0.034371557 9.725809e-01
+time 2               8.373102e-03 0.0057892475  1.446319601 1.480876e-01
+cost 1              -2.466955e-04 0.0004298554 -0.573903443 5.660331e-01
+cost 2              -5.924106e-05 0.0003187311 -0.185865317 8.525504e-01
+veh_own_11 1         1.270713e-01 0.2194082179  0.579154815 5.624847e-01
+veh_own_11 2         8.208955e-02 0.2221510280  0.369521357 7.117392e-01
+veh_type_11 1       -1.334365e-03 0.2647951028 -0.005039235 9.959793e-01
+veh_type_11 2       -2.869498e-02 0.2426170030 -0.118272762 9.058515e-01
+veh_type_21 1        7.911843e-03 0.2538429588  0.031168257 9.751354e-01
+veh_type_21 2        1.332313e-01 0.2369498963  0.562276435 5.739277e-01
+veh_type_31 1       -3.507123e-01 0.3892630018 -0.900964855 3.676070e-01
+veh_type_31 2       -1.346074e-01 0.2908944732 -0.462736307 6.435534e-01
+veh_feature_11 1    -2.393384e-02 0.1863636963 -0.128425419 8.978123e-01
+veh_feature_21 1    -1.092177e-01 0.1944930246 -0.561550713 5.744222e-01
+veh_feature_31 1     1.744066e-01 0.1538104949  1.133905478 2.568342e-01
+veh_feature_41 1     1.180394e-01 0.1682435838  0.701598255 4.829297e-01
+veh_feature_51 1    -7.368266e-02 0.1954360424 -0.377016744 7.061612e-01
+veh_feature_61 1     1.638220e-01 0.1810384573  0.904901663 3.655175e-01
+veh_feature_71 1     2.614881e-01 0.1706515721  1.532292107 1.254504e-01
+companion_tot 1     -5.927081e-02 0.0752382401 -0.787775085 4.308283e-01
+companion_tot 2     -5.660252e-02 0.0648199530 -0.873226864 3.825394e-01
+companion_11 1       1.515610e-01 0.2242953515  0.675720506 4.992181e-01
+companion_11 2      -3.037394e-02 0.1741702004 -0.174392262 8.615572e-01
+companion_21 1       3.854053e-01 0.2188404164  1.761124712 7.821730e-02
+companion_21 2       3.195226e-01 0.1934273457  1.651899653 9.855501e-02
+companion_31 1      -1.172062e-01 0.2960824503 -0.395856519 6.922109e-01
+companion_31 2       1.767477e-01 0.2781327252  0.635479613 5.251157e-01
+companion_41 1       1.499181e-03 0.2747974509  0.005455587 9.956471e-01
+companion_41 2       3.657120e-01 0.2144751269  1.705148977 8.816664e-02
+companion_51 1      -2.879869e-02 0.2331355926 -0.123527627 9.016893e-01
+companion_51 2       2.766431e-01 0.2064879985  1.339754023 1.803253e-01
+per_drive_31 1      -1.234669e-01 0.1765758257 -0.699228550 4.844092e-01
+per_drive_41 1      -5.427114e-01 0.2195663791 -2.471741638 1.344566e-02
+per_drive_51 1      -1.242603e+00 0.2308193091 -5.383444196 7.307391e-08
+trip_exp_11 1        1.947431e-01 0.1582856342  1.230326964 2.185747e-01
+trip_exp_11 2       -2.196707e-02 0.1369788307 -0.160368390 8.725909e-01
+trip_exp_31 1       -6.670360e-02 0.2191483813 -0.304376412 7.608411e-01
+trip_exp_31 2        2.074444e-01 0.1850580167  1.120969568 2.623008e-01
+trip_exp_41 1        1.293549e-01 0.1677369141  0.771177511 4.406017e-01
+trip_exp_41 2        3.210967e-01 0.1390348498  2.309469057 2.091757e-02
+av_usefulness 1      4.700282e-01 0.1479588300  3.176749977 1.489354e-03
+av_concern 1         1.592877e-01 0.0848632243  1.876992768 6.051909e-02
+tech_savviness 1    -5.588082e-02 0.1449152356 -0.385610373 6.997852e-01
+tech_savviness 2    -1.760027e-01 0.1906059928 -0.923384831 3.558067e-01
+driving_enjoyment 1 -3.292369e-02 0.1837150855 -0.179210610 8.577723e-01
+driving_enjoyment 2  8.282318e-02 0.1759538358  0.470709742 6.378480e-01
+polychronicity 1     2.313905e-01 0.1340370739  1.726317004 8.429040e-02
+polychronicity 2     1.996986e-01 0.1137012764  1.756344531 7.902960e-02
+envt_concern 1       1.094011e-01 0.1714445797  0.638113760 5.233996e-01
+envt_concern 2       1.568239e-01 0.1392164987  1.126475291 2.599644e-01
+
+$error.structure
+                          Estimate Std. Error  z value     Pr(>|z|)
+corr tba_g1_hv tba_g1_av 0.6752441 0.07433047 9.084351 1.043193e-19
+
+attr(,"class")
+[1] "summary.mvord"

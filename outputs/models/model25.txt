@@ -1,0 +1,80 @@
+
+Call: mvord(formula = MMO2(tu_hv, tu_av) ~ 0, data = df, link = mvprobit(), 
+    coef.constraints = c(1:2), threshold.constraints = c(1:2), 
+    control = mvord.control(solver = "nlminb"))
+
+Formula: MMO2(tu_hv, tu_av) ~ 0
+
+    link threshold nsubjects ndim    logPL   CLAIC  CLBIC fevals
+mvprobit  flexible       696    2 -1742.91 3504.06 3545.5     62
+
+Thresholds:
+           Estimate Std. Error z value  Pr(>|z|)    
+tu_hv 1|2 -2.132980   0.119555 -17.841 < 2.2e-16 ***
+tu_hv 2|3 -1.529656   0.075317 -20.310 < 2.2e-16 ***
+tu_hv 3|4 -0.704328   0.053489 -13.168 < 2.2e-16 ***
+tu_hv 4|5  0.118292   0.049125   2.408   0.01604 *  
+tu_av 1|2 -1.733559   0.090186 -19.222 < 2.2e-16 ***
+tu_av 2|3 -1.408639   0.073806 -19.086 < 2.2e-16 ***
+tu_av 3|4 -0.603797   0.052486 -11.504 < 2.2e-16 ***
+tu_av 4|5  0.218122   0.049126   4.440 8.995e-06 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Coefficients:
+     Estimate Std. Error z value Pr(>|z|)
+
+Error Structure:
+                 Estimate Std. Error z value  Pr(>|z|)    
+corr tu_hv tu_av 0.325646   0.042557   7.652 1.979e-14 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+$call
+mvord(formula = MMO2(tu_hv, tu_av) ~ 0, data = df, link = mvprobit(), 
+    coef.constraints = c(1:2), threshold.constraints = c(1:2), 
+    control = mvord.control(solver = "nlminb"))
+
+$formula
+MMO2(tu_hv, tu_av) ~ 0
+
+$info
+      c("link", object$rho$link$name) c("threshold", object$rho$threshold)
+                                 link                            threshold
+value                        mvprobit                             flexible
+      c("nsubjects", object$rho$n) c("ndim", object$rho$ndim)
+                         nsubjects                       ndim
+value                          696                          2
+      c("logPL", round(-object$rho$objective, 2))
+                                            logPL
+value                                    -1742.91
+      c("CLAIC", ifelse(object$rho$se, round(object$rho$claic, 2), 
+                                                              CLAIC
+value                                                       3504.06
+      c("CLBIC", ifelse(object$rho$se, round(object$rho$clbic, 2), 
+                                                              CLBIC
+value                                                        3545.5
+      c("fevals", if (is.null(object$rho$optRes$fevals)) NA else object$rho$optRes$fevals)
+                                                                                    fevals
+value                                                                                   62
+
+$thresholds
+            Estimate Std. Error    z value     Pr(>|z|)
+tu_hv 1|2 -2.1329802 0.11955452 -17.841067 3.391556e-71
+tu_hv 2|3 -1.5296555 0.07531682 -20.309614 1.057323e-91
+tu_hv 3|4 -0.7043285 0.05348891 -13.167749 1.345503e-39
+tu_hv 4|5  0.1182924 0.04912546   2.407965 1.604170e-02
+tu_av 1|2 -1.7335586 0.09018619 -19.221996 2.422671e-82
+tu_av 2|3 -1.4086394 0.07380577 -19.085763 3.315974e-81
+tu_av 3|4 -0.6037965 0.05248625 -11.503901 1.260858e-30
+tu_av 4|5  0.2181218 0.04912640   4.440011 8.995437e-06
+
+$coefficients
+[1] Estimate   Std. Error z value    Pr(>|z|)  
+<0 rows> (or 0-length row.names)
+
+$error.structure
+                  Estimate Std. Error  z value     Pr(>|z|)
+corr tu_hv tu_av 0.3256457 0.04255694 7.652001 1.978753e-14
+
+attr(,"class")
+[1] "summary.mvord"
