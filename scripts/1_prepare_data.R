@@ -18,29 +18,29 @@ df <- readRDS("./data/data.rds")
 df <- dummy_cols(df,
   select_columns =
     c(
-      "veh_own", 
-      "per_drive", 
-      "av_fam", 
-      "age_grp", 
-      "gender", 
-      "education", 
-      "school", 
-      "income_grp", 
-      "employment",       
-      "citation", 
-      "crash_exp", 
-      "mode_commute",      
-      "mode_shopping", 
-      "mode_personal",       
+      "veh_own",
+      "per_drive",
+      "av_fam",
+      "age_grp",
+      "gender",
+      "education",
+      "school",
+      "income_grp",
+      "employment",
+      "citation",
+      "crash_exp",
+      "mode_commute",
+      "mode_shopping",
+      "mode_personal",
       "mode_social"
     ),
   remove_selected_columns = TRUE
 )
 
-# difference in travel time usefulness
+# difference in travel time usefulness (TU or TTU)
 df$diff_tu <- factor(df$tu_av - df$tu_hv, levels = c(-4:4), labels = c(-4:4))
 
-# grouped travel-based activities for HV - continuous variables
+# grouped travel-based activities (TBAs) for HV - continuous variables
 df$tba_g1_hv_c <- df$tba_hv_7
 df$tba_g2_hv_c <- df$tba_hv_5 + df$tba_hv_6 + df$tba_hv_10
 df$tba_g3_hv_c <- df$tba_hv_3 + df$tba_hv_4
@@ -49,7 +49,7 @@ df$tba_g5_hv_c <- df$tba_hv_11 + df$tba_hv_12
 df$tba_g6_hv_c <- df$tba_hv_13 + df$tba_hv_14 + df$tba_hv_15
 df$tba_g7_hv_c <- df$tba_hv_16
 
-# grouped travel-based activities for AV - continuous variables
+# grouped TBAs for AV - continuous variables
 df$tba_g1_av_c <- df$tba_av_7
 df$tba_g2_av_c <- df$tba_av_5 + df$tba_av_6 + df$tba_av_10
 df$tba_g3_av_c <- df$tba_av_3 + df$tba_av_4
@@ -58,19 +58,21 @@ df$tba_g5_av_c <- df$tba_av_11 + df$tba_av_12
 df$tba_g6_av_c <- df$tba_av_13 + df$tba_av_14 + df$tba_av_15
 df$tba_g7_av_c <- df$tba_av_16
 
-# grouped travel-based activities for HV - dichotomous variables
+# grouped TBAs for HV - dichotomous variables
 for (i in 1:7) {
-  df[paste0("tba_g", i, "_hv")] <- ifelse(df[paste0("tba_g", i, "_hv_c")] > 0, 1, 0)
+  df[paste0("tba_g", i, "_hv")] <-
+    ifelse(df[paste0("tba_g", i, "_hv_c")] > 0, 1, 0)
 }
 rm(i)
 
-# grouped travel-based activities for AV - dichotomous variables
+# grouped TBAs for AV - dichotomous variables
 for (i in 1:7) {
-  df[paste0("tba_g", i, "_av")] <- ifelse(df[paste0("tba_g", i, "_av_c")] > 0, 1, 0)
+  df[paste0("tba_g", i, "_av")] <-
+    ifelse(df[paste0("tba_g", i, "_av_c")] > 0, 1, 0)
 }
 rm(i)
 
-# difference in travel based activities (AV - HV)
+# difference in TBAs (AV - HV)
 for (i in 1:7) {
   df[paste0("tba_g", i, "_diff")] <-
     df[paste0("tba_g", i, "_av_c")] - df[paste0("tba_g", i, "_hv_c")]
