@@ -23,7 +23,7 @@ df <- readRDS("./data/prepared_data.rds")
 ## measurement model--------
 # model
 model1 <-
-"
+  "
 av_usefulness     =~ av_benefit_1 + av_benefit_2 + av_benefit_3 +
                      av_benefit_4 + av_benefit_5 + av_benefit_6 +
                      av_concern_1 + av_concern_4 + av_concern_5
@@ -49,7 +49,7 @@ view(lavInspect(model1, "cor.lv"))
 ## structural model (full model)--------
 # model
 model2 <-
-"
+  "
 av_usefulness     =~ av_benefit_1 + av_benefit_2 + av_benefit_3 +
                      av_benefit_4 + av_benefit_5 + av_benefit_6 +
                      av_concern_1 + av_concern_4 + av_concern_5
@@ -126,7 +126,7 @@ rm(model2)
 ## structural model (final model)--------
 # model
 model3 <-
-"
+  "
 av_usefulness     =~ av_benefit_1 + av_benefit_2 + av_benefit_3 +
                      av_benefit_4 + av_benefit_5 + av_benefit_6 +
                      av_concern_1 + av_concern_4 + av_concern_5
@@ -136,20 +136,20 @@ tech_savviness    =~ tech_savvy_1  + tech_savvy_3
 driving_enjoyment =~ enjoy_driving_1 + enjoy_driving_3 + enjoy_driving_4
 polychronicity    =~ polychronicity_1 + polychronicity_2 + polychronicity_3
 envt_concern      =~ envt_concern_1 + envt_concern_2 + envt_concern_3
-av_usefulness      ~ gender_1 + education_3 + employment_3 + 
-                     driving_exp + mode_commute_3 + mode_personal_3 
+av_usefulness      ~ gender_1 + education_3 + employment_3 +
+                     driving_exp + mode_commute_3 + mode_personal_3
 av_concern         ~ race_1 + gender_1 +  hh_adult +
                      hh_child + income_grp_2 + income_grp_3 +
-                     driving_exp + citation_1 
-tech_savviness     ~ age_grp_2 + gender_1 + hh_child + 
-                     income_grp_4 + employment_3 + driving_exp + 
-                     crash_exp_1 + mode_personal_3 + mode_social_3 
-driving_enjoyment  ~ gender_1 + school_2 + driving_exp + 
+                     driving_exp + citation_1
+tech_savviness     ~ age_grp_2 + gender_1 + hh_child +
+                     income_grp_4 + employment_3 + driving_exp +
+                     crash_exp_1 + mode_personal_3 + mode_social_3
+driving_enjoyment  ~ gender_1 + school_2 + driving_exp +
                      citation_1 + mode_personal_3 + rec_trips
-polychronicity     ~ education_3 + hh_child + income_grp_2 + 
-                     employment_3 + driving_exp + citation_1 
+polychronicity     ~ education_3 + hh_child + income_grp_2 +
+                     employment_3 + driving_exp + citation_1
 envt_concern       ~ gender_1 + education_2 + education_3 +
-                     employment_2 + crash_exp_1 
+                     employment_2 + crash_exp_1
 "
 
 # fit the model and save the outputs
