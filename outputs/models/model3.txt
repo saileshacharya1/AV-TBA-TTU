@@ -250,3 +250,84 @@ Status	Count	Legend
 ✖ 	0	Styling threw an error.
 ────────────────────────────────────────
 Please review the changes carefully!
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+Styling  1  files:
+ scripts/3_plots.R ℹ 
+────────────────────────────────────────
+Status	Count	Legend 
+✔ 	0	File unchanged.
+ℹ 	1	File changed.
+✖ 	0	Styling threw an error.
+────────────────────────────────────────
+Please review the changes carefully!
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+Styling  1  files:
+ scripts/3_plots.R ✔ 
+────────────────────────────────────────
+Status	Count	Legend 
+✔ 	1	File unchanged.
+ℹ 	0	File changed.
+✖ 	0	Styling threw an error.
+────────────────────────────────────────
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
+null device 
+          1 
