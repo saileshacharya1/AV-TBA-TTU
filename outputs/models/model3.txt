@@ -1,2 +1,235 @@
-   Length     Class      Mode 
-        1 character character 
+lavaan 0.6.15 ended normally after 83 iterations
+
+  Estimator                                         ML
+  Optimization method                           NLMINB
+  Number of model parameters                       103
+
+  Number of observations                           696
+
+Model Test User Model:
+                                              Standard      Scaled
+  Test Statistic                              1491.964    1429.401
+  Degrees of freedom                               677         677
+  P-value (Chi-square)                           0.000       0.000
+  Scaling correction factor                                  1.044
+    Satorra-Bentler correction                                    
+
+Model Test Baseline Model:
+
+  Test statistic                             10259.713   10488.831
+  Degrees of freedom                               756         756
+  P-value                                        0.000       0.000
+  Scaling correction factor                                  0.978
+
+User Model versus Baseline Model:
+
+  Comparative Fit Index (CFI)                    0.914       0.923
+  Tucker-Lewis Index (TLI)                       0.904       0.914
+                                                                  
+  Robust Comparative Fit Index (CFI)                         0.918
+  Robust Tucker-Lewis Index (TLI)                            0.908
+
+Loglikelihood and Information Criteria:
+
+  Loglikelihood user model (H0)             -22345.488  -22345.488
+  Loglikelihood unrestricted model (H1)     -21599.506  -21599.506
+                                                                  
+  Akaike (AIC)                               44896.977   44896.977
+  Bayesian (BIC)                             45365.148   45365.148
+  Sample-size adjusted Bayesian (SABIC)      45038.104   45038.104
+
+Root Mean Square Error of Approximation:
+
+  RMSEA                                          0.042       0.040
+  90 Percent confidence interval - lower         0.039       0.037
+  90 Percent confidence interval - upper         0.044       0.043
+  P-value H_0: RMSEA <= 0.050                    1.000       1.000
+  P-value H_0: RMSEA >= 0.080                    0.000       0.000
+                                                                  
+  Robust RMSEA                                               0.041
+  90 Percent confidence interval - lower                     0.038
+  90 Percent confidence interval - upper                     0.044
+  P-value H_0: Robust RMSEA <= 0.050                         1.000
+  P-value H_0: Robust RMSEA >= 0.080                         0.000
+
+Standardized Root Mean Square Residual:
+
+  SRMR                                           0.040       0.040
+
+Parameter Estimates:
+
+  Standard errors                           Robust.sem
+  Information                                 Expected
+  Information saturated (h1) model          Structured
+
+Latent Variables:
+                       Estimate  Std.Err  z-value  P(>|z|)   Std.lv  Std.all
+  av_usefulness =~                                                          
+    av_benefit_1          1.000                               0.961    0.854
+    av_benefit_2          1.091    0.030   36.820    0.000    1.048    0.839
+    av_benefit_3          0.930    0.040   23.267    0.000    0.893    0.732
+    av_benefit_4          1.110    0.030   37.358    0.000    1.067    0.840
+    av_benefit_5          1.056    0.028   38.145    0.000    1.015    0.862
+    av_benefit_6          1.053    0.032   33.270    0.000    1.012    0.853
+    av_concern_1          0.945    0.042   22.665    0.000    0.908    0.656
+    av_concern_4          1.051    0.034   31.177    0.000    1.010    0.766
+    av_concern_5          0.911    0.035   25.789    0.000    0.876    0.712
+  av_concern =~                                                             
+    av_concern_2          1.000                               0.906    0.808
+    av_concern_3          0.992    0.048   20.481    0.000    0.899    0.815
+    av_concern_6          0.800    0.050   15.862    0.000    0.725    0.617
+    av_concern_7          0.909    0.057   15.843    0.000    0.824    0.693
+  tech_savviness =~                                                         
+    tech_savvy_1          1.000                               1.068    0.800
+    tech_savvy_3          0.619    0.042   14.780    0.000    0.661    0.621
+  driving_enjoyment =~                                                      
+    enjoy_drivng_1        1.000                               0.453    0.489
+    enjoy_drivng_3       -2.380    0.245   -9.711    0.000   -1.078   -0.823
+    enjoy_drivng_4       -2.077    0.216   -9.609    0.000   -0.941   -0.744
+  polychronicity =~                                                         
+    polychroncty_1        1.000                               0.919    0.804
+    polychroncty_2        1.026    0.043   24.059    0.000    0.942    0.817
+    polychroncty_3        1.082    0.042   25.942    0.000    0.994    0.887
+  envt_concern =~                                                           
+    envt_concern_1        1.000                               0.622    0.566
+    envt_concern_2       -1.549    0.155  -10.013    0.000   -0.963   -0.745
+    envt_concern_3       -1.396    0.143   -9.786    0.000   -0.869   -0.648
+
+Regressions:
+                      Estimate  Std.Err  z-value  P(>|z|)   Std.lv  Std.all
+  av_usefulness ~                                                          
+    gender_1            -0.204    0.066   -3.082    0.002   -0.213   -0.106
+    education_3          0.356    0.069    5.154    0.000    0.370    0.143
+    employment_3         0.358    0.075    4.748    0.000    0.373    0.185
+    driving_exp         -0.014    0.002   -6.285    0.000   -0.015   -0.242
+    mode_commute_3       0.217    0.090    2.421    0.015    0.226    0.074
+    mode_personl_3      -0.243    0.100   -2.424    0.015   -0.253   -0.073
+  av_concern ~                                                             
+    race_1               0.263    0.098    2.683    0.007    0.291    0.110
+    gender_1             0.199    0.073    2.733    0.006    0.219    0.110
+    hh_adult             0.109    0.035    3.140    0.002    0.121    0.119
+    hh_child            -0.120    0.034   -3.510    0.000   -0.132   -0.152
+    income_grp_2         0.220    0.084    2.632    0.008    0.243    0.108
+    income_grp_3         0.266    0.088    3.032    0.002    0.293    0.122
+    driving_exp          0.005    0.003    1.982    0.047    0.006    0.094
+    citation_1          -0.180    0.078   -2.323    0.020   -0.199   -0.098
+  tech_savviness ~                                                         
+    age_grp_2            0.267    0.072    3.709    0.000    0.250    0.123
+    gender_1            -0.316    0.077   -4.079    0.000   -0.295   -0.148
+    hh_child             0.110    0.034    3.199    0.001    0.103    0.119
+    income_grp_4         0.250    0.089    2.812    0.005    0.234    0.082
+    employment_3         0.474    0.095    4.975    0.000    0.444    0.220
+    driving_exp         -0.023    0.003   -7.766    0.000   -0.021   -0.351
+    crash_exp_1          0.231    0.073    3.156    0.002    0.216    0.102
+    mode_personl_3      -0.260    0.138   -1.877    0.061   -0.243   -0.070
+    mode_social_3        0.299    0.119    2.510    0.012    0.279    0.084
+  driving_enjoyment ~                                                      
+    gender_1            -0.104    0.038   -2.730    0.006   -0.230   -0.115
+    school_2            -0.110    0.062   -1.769    0.077   -0.242   -0.060
+    driving_exp          0.006    0.001    5.262    0.000    0.014    0.234
+    citation_1          -0.078    0.039   -1.995    0.046   -0.173   -0.085
+    mode_personl_3       0.166    0.073    2.285    0.022    0.367    0.106
+    rec_trips            0.026    0.009    2.867    0.004    0.057    0.125
+  polychronicity ~                                                         
+    education_3          0.177    0.085    2.092    0.036    0.193    0.074
+    hh_child             0.075    0.029    2.537    0.011    0.081    0.094
+    income_grp_2        -0.151    0.075   -2.006    0.045   -0.164   -0.073
+    employment_3         0.331    0.075    4.409    0.000    0.361    0.179
+    driving_exp         -0.013    0.002   -5.212    0.000   -0.014   -0.229
+    citation_1          -0.113    0.066   -1.702    0.089   -0.123   -0.061
+  envt_concern ~                                                           
+    gender_1             0.182    0.058    3.159    0.002    0.292    0.146
+    education_2          0.137    0.061    2.254    0.024    0.221    0.108
+    education_3          0.270    0.076    3.555    0.000    0.435    0.168
+    employment_2        -0.145    0.069   -2.109    0.035   -0.234   -0.078
+    crash_exp_1          0.100    0.057    1.743    0.081    0.161    0.076
+
+Covariances:
+                       Estimate  Std.Err  z-value  P(>|z|)   Std.lv  Std.all
+ .av_usefulness ~~                                                          
+   .av_concern           -0.139    0.038   -3.622    0.000   -0.187   -0.187
+   .tech_savviness        0.517    0.044   11.687    0.000    0.704    0.704
+   .driving_njymnt       -0.090    0.018   -4.863    0.000   -0.244   -0.244
+   .polychronicity        0.292    0.035    8.275    0.000    0.401    0.401
+   .envt_concern          0.117    0.032    3.638    0.000    0.224    0.224
+ .av_concern ~~                                                             
+   .tech_savviness       -0.038    0.040   -0.948    0.343   -0.053   -0.053
+   .driving_njymnt        0.023    0.017    1.314    0.189    0.063    0.063
+   .polychronicity       -0.034    0.035   -0.961    0.336   -0.047   -0.047
+   .envt_concern         -0.059    0.026   -2.282    0.022   -0.115   -0.115
+ .tech_savviness ~~                                                         
+   .driving_njymnt       -0.049    0.020   -2.427    0.015   -0.137   -0.137
+   .polychronicity        0.395    0.042    9.409    0.000    0.560    0.560
+   .envt_concern          0.157    0.035    4.510    0.000    0.309    0.309
+ .driving_enjoyment ~~                                                      
+   .polychronicity       -0.055    0.018   -3.106    0.002   -0.156   -0.156
+   .envt_concern          0.037    0.014    2.567    0.010    0.144    0.144
+ .polychronicity ~~                                                         
+   .envt_concern          0.036    0.028    1.304    0.192    0.072    0.072
+
+Variances:
+                   Estimate  Std.Err  z-value  P(>|z|)   Std.lv  Std.all
+   .av_benefit_1      0.343    0.026   13.293    0.000    0.343    0.271
+   .av_benefit_2      0.463    0.034   13.692    0.000    0.463    0.297
+   .av_benefit_3      0.692    0.046   14.966    0.000    0.692    0.464
+   .av_benefit_4      0.474    0.033   14.410    0.000    0.474    0.294
+   .av_benefit_5      0.355    0.030   11.923    0.000    0.355    0.256
+   .av_benefit_6      0.384    0.032   12.002    0.000    0.384    0.273
+   .av_concern_1      1.090    0.053   20.708    0.000    1.090    0.570
+   .av_concern_4      0.717    0.045   15.964    0.000    0.717    0.413
+   .av_concern_5      0.747    0.047   15.765    0.000    0.747    0.494
+   .av_concern_2      0.437    0.050    8.691    0.000    0.437    0.347
+   .av_concern_3      0.408    0.047    8.640    0.000    0.408    0.336
+   .av_concern_6      0.854    0.060   14.134    0.000    0.854    0.619
+   .av_concern_7      0.733    0.064   11.515    0.000    0.733    0.519
+   .tech_savvy_1      0.641    0.074    8.616    0.000    0.641    0.359
+   .tech_savvy_3      0.695    0.045   15.409    0.000    0.695    0.614
+   .enjoy_drivng_1    0.653    0.054   12.169    0.000    0.653    0.761
+   .enjoy_drivng_3    0.553    0.093    5.969    0.000    0.553    0.322
+   .enjoy_drivng_4    0.712    0.080    8.912    0.000    0.712    0.446
+   .polychroncty_1    0.462    0.046   10.125    0.000    0.462    0.354
+   .polychroncty_2    0.443    0.045    9.787    0.000    0.443    0.333
+   .polychroncty_3    0.268    0.037    7.324    0.000    0.268    0.213
+   .envt_concern_1    0.821    0.065   12.637    0.000    0.821    0.680
+   .envt_concern_2    0.744    0.094    7.908    0.000    0.744    0.445
+   .envt_concern_3    1.042    0.105    9.920    0.000    1.042    0.580
+   .av_usefulness     0.756    0.053   14.398    0.000    0.819    0.819
+   .av_concern        0.725    0.073    9.931    0.000    0.883    0.883
+   .tech_savviness    0.712    0.079    8.990    0.000    0.624    0.624
+   .driving_njymnt    0.179    0.034    5.316    0.000    0.870    0.870
+   .polychronicity    0.699    0.057   12.226    0.000    0.829    0.829
+   .envt_concern      0.363    0.059    6.166    0.000    0.939    0.939
+
+R-Square:
+                   Estimate
+    av_benefit_1      0.729
+    av_benefit_2      0.703
+    av_benefit_3      0.536
+    av_benefit_4      0.706
+    av_benefit_5      0.744
+    av_benefit_6      0.727
+    av_concern_1      0.430
+    av_concern_4      0.587
+    av_concern_5      0.506
+    av_concern_2      0.653
+    av_concern_3      0.664
+    av_concern_6      0.381
+    av_concern_7      0.481
+    tech_savvy_1      0.641
+    tech_savvy_3      0.386
+    enjoy_drivng_1    0.239
+    enjoy_drivng_3    0.678
+    enjoy_drivng_4    0.554
+    polychroncty_1    0.646
+    polychroncty_2    0.667
+    polychroncty_3    0.787
+    envt_concern_1    0.320
+    envt_concern_2    0.555
+    envt_concern_3    0.420
+    av_usefulness     0.181
+    av_concern        0.117
+    tech_savviness    0.376
+    driving_njymnt    0.130
+    polychronicity    0.171
+    envt_concern      0.061
+
