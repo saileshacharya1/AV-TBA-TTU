@@ -233,3 +233,20 @@ R-Square:
     polychronicity    0.171
     envt_concern      0.061
 
+Styling  1  files:
+ scripts/1_prepare_data.R ✔ 
+────────────────────────────────────────
+Status	Count	Legend 
+✔ 	1	File unchanged.
+ℹ 	0	File changed.
+✖ 	0	Styling threw an error.
+────────────────────────────────────────
+Styling  1  files:
+ scripts/2_analyses.R ℹ 
+────────────────────────────────────────
+Status	Count	Legend 
+✔ 	0	File unchanged.
+ℹ 	1	File changed.
+✖ 	0	Styling threw an error.
+────────────────────────────────────────
+Please review the changes carefully!
