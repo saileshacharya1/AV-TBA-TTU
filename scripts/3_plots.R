@@ -80,7 +80,14 @@ df_p1$variable <- ifelse(str_detect(df_p1$item, "envt"),
 )
 
 # factor levels of variables
-df_p1$variable <- factor(df_p1$variable, levels = unique(df_p1$variable))
+df_p1$variable <- factor(df_p1$variable, levels = c(
+  "Environmental \n concern",
+  "Technology \n savviness",
+  "Driving \n enjoyment",
+  "Polychronicity",
+  "AV concern",
+  "AV usefulness"
+))
 
 # factor levels of outcomes
 df_p1$outcome <- factor(df_p1$outcome,
