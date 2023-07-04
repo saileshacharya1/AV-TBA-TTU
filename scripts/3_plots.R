@@ -93,9 +93,9 @@ df_p1$variable <- factor(df_p1$variable, levels = c(
 df_p1$outcome <- factor(df_p1$outcome,
   levels = c(5:1),
   labels = c(
-    "Strongly agree", "Somewhat agree",
-    "Neutral",
-    "Somewhat disagree", "Strongly disagree"
+    "Strongly agree (5)", "Somewhat agree (4)",
+    "Neutral (3)",
+    "Somewhat disagree (2)", "Strongly disagree (1)"
   )
 )
 
@@ -355,9 +355,9 @@ df_p3 <- df_p3 %>%
 df_p3$level <- factor(df_p3$level,
   levels = c(5:1),
   labels = c(
-    "Mostly useful", "Somewhat useful",
-    "Neither wasted nor useful",
-    "Somewhat wasted", "Mostly wasted"
+    "Mostly useful (5)", "Somewhat useful (4)",
+    "Neutral (3)",
+    "Somewhat wasted (2)", "Mostly wasted (1)"
   )
 )
 
