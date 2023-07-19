@@ -81,12 +81,12 @@ df_p1$variable <- ifelse(str_detect(df_p1$item, "envt"),
 
 # factor levels of variables
 df_p1$variable <- factor(df_p1$variable, levels = c(
-  "Environmental \n concern",
-  "Technology \n savviness",
-  "Driving \n enjoyment",
-  "Polychronicity",
+  "AV usefulness",
   "AV concern",
-  "AV usefulness"
+  "Polychronicity",
+  "Driving \n enjoyment",
+  "Technology \n savviness",
+  "Environmental \n concern"
 ))
 
 # factor levels of outcomes
@@ -148,7 +148,7 @@ items <-
     myself and my family. (EC-3)"
   )
 df_p1$item <- as.character(items[df_p1$item])
-df_p1$item <- factor(df_p1$item, levels = as.character(items))
+df_p1$item <- factor(df_p1$item, levels = rev(as.character(items)))
 rm(items)
 
 # plot of items of latent variables
