@@ -1,4 +1,4 @@
-lavaan 0.6.15 ended normally after 83 iterations
+lavaan 0.6.16 ended normally after 83 iterations
 
   Estimator                                         ML
   Optimization method                           NLMINB
@@ -233,101 +233,203 @@ R-Square:
     polychronicity    0.171
     envt_concern      0.061
 
-Styling  1  files:
- scripts/1_prepare_data.R ✔ 
-────────────────────────────────────────
-Status	Count	Legend 
-✔ 	1	File unchanged.
-ℹ 	0	File changed.
-✖ 	0	Styling threw an error.
-────────────────────────────────────────
-Styling  1  files:
- scripts/2_analyses.R ℹ 
-────────────────────────────────────────
-Status	Count	Legend 
-✔ 	0	File unchanged.
-ℹ 	1	File changed.
-✖ 	0	Styling threw an error.
-────────────────────────────────────────
-Please review the changes carefully!
-null device 
-          1 
-null device 
-          1 
-null device 
-          1 
-null device 
-          1 
-null device 
-          1 
-null device 
-          1 
-null device 
-          1 
-null device 
-          1 
-null device 
-          1 
-null device 
-          1 
-null device 
-          1 
-null device 
-          1 
-null device 
-          1 
-null device 
-          1 
-null device 
-          1 
-null device 
-          1 
-null device 
-          1 
-null device 
-          1 
-null device 
-          1 
-null device 
-          1 
-null device 
-          1 
-Styling  1  files:
- scripts/3_plots.R ℹ 
-────────────────────────────────────────
-Status	Count	Legend 
-✔ 	0	File unchanged.
-ℹ 	1	File changed.
-✖ 	0	Styling threw an error.
-────────────────────────────────────────
-Please review the changes carefully!
-null device 
-          1 
-null device 
-          1 
-null device 
-          1 
-null device 
-          1 
-Styling  1  files:
- scripts/3_plots.R ✔ 
-────────────────────────────────────────
-Status	Count	Legend 
-✔ 	1	File unchanged.
-ℹ 	0	File changed.
-✖ 	0	Styling threw an error.
-────────────────────────────────────────
-null device 
-          1 
-null device 
-          1 
-null device 
-          1 
-null device 
-          1 
-null device 
-          1 
-null device 
-          1 
-null device 
-          1 
+
+Call: mvord(formula = MMO2(tu_hv, tu_av) ~ 0, data = df, link = mvprobit(), 
+    coef.constraints = c(1:2), threshold.constraints = c(1:2), 
+    control = mvord.control(solver = "nlminb"))
+
+Formula: MMO2(tu_hv, tu_av) ~ 0
+
+    link threshold nsubjects ndim    logPL   CLAIC  CLBIC fevals
+mvprobit  flexible       696    2 -1742.91 3504.06 3545.5     62
+
+Thresholds:
+           Estimate Std. Error z value  Pr(>|z|)    
+tu_hv 1|2 -2.132980   0.119555 -17.841 < 2.2e-16 ***
+tu_hv 2|3 -1.529656   0.075317 -20.310 < 2.2e-16 ***
+tu_hv 3|4 -0.704328   0.053489 -13.168 < 2.2e-16 ***
+tu_hv 4|5  0.118292   0.049125   2.408   0.01604 *  
+tu_av 1|2 -1.733559   0.090186 -19.222 < 2.2e-16 ***
+tu_av 2|3 -1.408639   0.073806 -19.086 < 2.2e-16 ***
+tu_av 3|4 -0.603797   0.052486 -11.504 < 2.2e-16 ***
+tu_av 4|5  0.218122   0.049126   4.440 8.995e-06 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Coefficients:
+     Estimate Std. Error z value Pr(>|z|)
+
+Error Structure:
+                 Estimate Std. Error z value  Pr(>|z|)    
+corr tu_hv tu_av 0.325646   0.042557   7.652 1.979e-14 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+$call
+mvord(formula = MMO2(tu_hv, tu_av) ~ 0, data = df, link = mvprobit(), 
+    coef.constraints = c(1:2), threshold.constraints = c(1:2), 
+    control = mvord.control(solver = "nlminb"))
+
+$formula
+MMO2(tu_hv, tu_av) ~ 0
+
+$info
+      c("link", object$rho$link$name) c("threshold", object$rho$threshold) c("nsubjects", object$rho$n) c("ndim", object$rho$ndim)
+                                 link                            threshold                    nsubjects                       ndim
+value                        mvprobit                             flexible                          696                          2
+      c("logPL", round(-object$rho$objective, 2)) c("CLAIC", ifelse(object$rho$se, round(object$rho$claic, 2), 
+                                            logPL                                                         CLAIC
+value                                    -1742.91                                                       3504.06
+      c("CLBIC", ifelse(object$rho$se, round(object$rho$clbic, 2),  c("fevals", if (is.null(object$rho$optRes$fevals)) NA else object$rho$optRes$fevals)
+                                                              CLBIC                                                                               fevals
+value                                                        3545.5                                                                                   62
+
+$thresholds
+            Estimate Std. Error    z value     Pr(>|z|)
+tu_hv 1|2 -2.1329802 0.11955452 -17.841067 3.391556e-71
+tu_hv 2|3 -1.5296555 0.07531682 -20.309614 1.057323e-91
+tu_hv 3|4 -0.7043285 0.05348891 -13.167749 1.345503e-39
+tu_hv 4|5  0.1182924 0.04912546   2.407965 1.604170e-02
+tu_av 1|2 -1.7335586 0.09018619 -19.221996 2.422671e-82
+tu_av 2|3 -1.4086394 0.07380577 -19.085763 3.315974e-81
+tu_av 3|4 -0.6037965 0.05248625 -11.503901 1.260858e-30
+tu_av 4|5  0.2181218 0.04912640   4.440011 8.995437e-06
+
+$coefficients
+[1] Estimate   Std. Error z value    Pr(>|z|)  
+<0 rows> (or 0-length row.names)
+
+$error.structure
+                  Estimate Std. Error  z value     Pr(>|z|)
+corr tu_hv tu_av 0.3256457 0.04255694 7.652001 1.978753e-14
+
+attr(,"class")
+[1] "summary.mvord"
+
+Call: mvord(formula = MMO2(tu_hv, tu_av) ~ 0 + race_1 + driving_exp + 
+    mode_shopping_3 + citation_1 + cost + companion_3 + companion_4 + 
+    trip_exp_1 + trip_exp_3 + av_usefulness + tech_savviness + 
+    driving_enjoyment + tba_g5_hv + tba_g3_av + tba_g5_av, data = df, 
+    link = mvprobit(), coef.constraints = cbind(c(1, NA), c(NA, 
+        2), c(1, 2), c(1, NA), c(1, 2), c(NA, 2), c(NA, 2), c(1, 
+        NA), c(NA, 2), c(NA, 2), c(1, 2), c(1, 2), c(1, NA), 
+        c(NA, 2), c(NA, 2)), threshold.constraints = c(1:2), 
+    control = mvord.control(solver = "nlminb"))
+
+Formula: MMO2(tu_hv, tu_av) ~ 0 + race_1 + driving_exp + mode_shopping_3 + 
+    citation_1 + cost + companion_3 + companion_4 + trip_exp_1 + 
+    trip_exp_3 + av_usefulness + tech_savviness + driving_enjoyment + 
+    tba_g5_hv + tba_g3_av + tba_g5_av
+
+    link threshold nsubjects ndim    logPL CLAIC  CLBIC fevals
+mvprobit  flexible       696    2 -1547.32  3153 3285.6    122
+
+Thresholds:
+          Estimate Std. Error  z value  Pr(>|z|)    
+tu_hv 1|2 -2.49552    0.21328 -11.7005 < 2.2e-16 ***
+tu_hv 2|3 -1.86571    0.20762  -8.9860 < 2.2e-16 ***
+tu_hv 3|4 -0.97975    0.19828  -4.9413 7.761e-07 ***
+tu_hv 4|5 -0.10135    0.19623  -0.5165    0.6055    
+tu_av 1|2 -2.75307    0.22607 -12.1781 < 2.2e-16 ***
+tu_av 2|3 -2.32138    0.22041 -10.5319 < 2.2e-16 ***
+tu_av 3|4 -1.23311    0.21462  -5.7456 9.158e-09 ***
+tu_av 4|5 -0.13955    0.20714  -0.6737    0.5005    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Coefficients:
+                       Estimate  Std. Error z value  Pr(>|z|)    
+race_11 1           -0.24353485  0.11917029 -2.0436 0.0409944 *  
+driving_exp 1       -0.00666344  0.00289550 -2.3013 0.0213740 *  
+mode_shopping_31 1  -0.37628826  0.17385250 -2.1644 0.0304328 *  
+mode_shopping_31 2  -0.53026920  0.18533908 -2.8611 0.0042221 ** 
+citation_11 1        0.23194182  0.09089813  2.5517 0.0107209 *  
+cost 1               0.00045005  0.00024666  1.8246 0.0680662 .  
+cost 2               0.00042254  0.00024738  1.7081 0.0876226 .  
+companion_31 1       0.35426363  0.19352230  1.8306 0.0671589 .  
+companion_41 1      -0.35585292  0.11837555 -3.0061 0.0026459 ** 
+trip_exp_11 1        0.22302461  0.08715422  2.5590 0.0104984 *  
+trip_exp_31 1        0.44230460  0.14061633  3.1455 0.0016582 ** 
+av_usefulness 1      0.57610137  0.07647100  7.5336 4.936e-14 ***
+tech_savviness 1     0.16711686  0.05057125  3.3046 0.0009512 ***
+tech_savviness 2     0.21486251  0.07871706  2.7296 0.0063420 ** 
+driving_enjoyment 1  0.66441253  0.11633883  5.7110 1.123e-08 ***
+driving_enjoyment 2  0.30823625  0.12264753  2.5132 0.0119646 *  
+tba_g5_hv.L 1        0.14235575  0.06411098  2.2205 0.0263877 *  
+tba_g3_av.L 1        0.19307995  0.07928976  2.4351 0.0148869 *  
+tba_g5_av.L 1        0.16701382  0.06606891  2.5279 0.0114756 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Error Structure:
+                 Estimate Std. Error z value  Pr(>|z|)    
+corr tu_hv tu_av 0.347065   0.046441  7.4733 7.821e-14 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+$call
+mvord(formula = MMO2(tu_hv, tu_av) ~ 0 + race_1 + driving_exp + 
+    mode_shopping_3 + citation_1 + cost + companion_3 + companion_4 + 
+    trip_exp_1 + trip_exp_3 + av_usefulness + tech_savviness + 
+    driving_enjoyment + tba_g5_hv + tba_g3_av + tba_g5_av, data = df, 
+    link = mvprobit(), coef.constraints = cbind(c(1, NA), c(NA, 
+        2), c(1, 2), c(1, NA), c(1, 2), c(NA, 2), c(NA, 2), c(1, 
+        NA), c(NA, 2), c(NA, 2), c(1, 2), c(1, 2), c(1, NA), 
+        c(NA, 2), c(NA, 2)), threshold.constraints = c(1:2), 
+    control = mvord.control(solver = "nlminb"))
+
+$formula
+MMO2(tu_hv, tu_av) ~ 0 + race_1 + driving_exp + mode_shopping_3 + 
+    citation_1 + cost + companion_3 + companion_4 + trip_exp_1 + 
+    trip_exp_3 + av_usefulness + tech_savviness + driving_enjoyment + 
+    tba_g5_hv + tba_g3_av + tba_g5_av
+
+$info
+      c("link", object$rho$link$name) c("threshold", object$rho$threshold) c("nsubjects", object$rho$n) c("ndim", object$rho$ndim)
+                                 link                            threshold                    nsubjects                       ndim
+value                        mvprobit                             flexible                          696                          2
+      c("logPL", round(-object$rho$objective, 2)) c("CLAIC", ifelse(object$rho$se, round(object$rho$claic, 2), 
+                                            logPL                                                         CLAIC
+value                                    -1547.32                                                          3153
+      c("CLBIC", ifelse(object$rho$se, round(object$rho$clbic, 2),  c("fevals", if (is.null(object$rho$optRes$fevals)) NA else object$rho$optRes$fevals)
+                                                              CLBIC                                                                               fevals
+value                                                        3285.6                                                                                  122
+
+$thresholds
+            Estimate Std. Error     z value     Pr(>|z|)
+tu_hv 1|2 -2.4955243  0.2132835 -11.7005053 1.266968e-31
+tu_hv 2|3 -1.8657143  0.2076247  -8.9859954 2.564027e-19
+tu_hv 3|4 -0.9797467  0.1982774  -4.9412920 7.760658e-07
+tu_hv 4|5 -0.1013457  0.1962271  -0.5164713 6.055252e-01
+tu_av 1|2 -2.7530727  0.2260672 -12.1781172 4.065590e-34
+tu_av 2|3 -2.3213789  0.2204149 -10.5318580 6.160631e-26
+tu_av 3|4 -1.2331134  0.2146174  -5.7456355 9.157637e-09
+tu_av 4|5 -0.1395478  0.2071399  -0.6736885 5.005094e-01
+
+$coefficients
+                         Estimate   Std. Error   z value     Pr(>|z|)
+race_11 1           -0.2435348456 0.1191702895 -2.043587 4.099437e-02
+driving_exp 1       -0.0066634407 0.0028954964 -2.301312 2.137400e-02
+mode_shopping_31 1  -0.3762882638 0.1738525026 -2.164411 3.043282e-02
+mode_shopping_31 2  -0.5302692005 0.1853390768 -2.861076 4.222057e-03
+citation_11 1        0.2319418187 0.0908981281  2.551668 1.072087e-02
+cost 1               0.0004500492 0.0002466607  1.824568 6.806621e-02
+cost 2               0.0004225430 0.0002473798  1.708074 8.762258e-02
+companion_31 1       0.3542636311 0.1935222967  1.830609 6.715895e-02
+companion_41 1      -0.3558529222 0.1183755462 -3.006135 2.645911e-03
+trip_exp_11 1        0.2230246124 0.0871542160  2.558965 1.049842e-02
+trip_exp_31 1        0.4423046046 0.1406163266  3.145471 1.658195e-03
+av_usefulness 1      0.5761013683 0.0764709952  7.533593 4.936276e-14
+tech_savviness 1     0.1671168608 0.0505712458  3.304583 9.511793e-04
+tech_savviness 2     0.2148625098 0.0787170641  2.729554 6.341998e-03
+driving_enjoyment 1  0.6644125285 0.1163388267  5.711013 1.123058e-08
+driving_enjoyment 2  0.3082362532 0.1226475347  2.513188 1.196457e-02
+tba_g5_hv.L 1        0.1423557528 0.0641109784  2.220458 2.638767e-02
+tba_g3_av.L 1        0.1930799502 0.0792897645  2.435118 1.488693e-02
+tba_g5_av.L 1        0.1670138156 0.0660689126  2.527873 1.147559e-02
+
+$error.structure
+                  Estimate Std. Error  z value    Pr(>|z|)
+corr tu_hv tu_av 0.3470653 0.04644067 7.473304 7.82057e-14
+
+attr(,"class")
+[1] "summary.mvord"
+'log Lik.' -1742.91 (df=9.117904)

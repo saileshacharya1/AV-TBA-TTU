@@ -302,6 +302,18 @@ model6 <- mvord(
 sink("./outputs/models/model6.txt")
 print(summary(model6))
 rm(model6)
+
+# likelihood ratio test
+ll_null <- as.numeric(logLik(model4))
+ll_full <- as.numeric(logLik(model6))
+df_null <- attr(logLik(model4), "df")
+df_full <- attr(logLik(model6), "df")
+LR_stat <- 2 * (ll_full - ll_null)
+df_diff <- df_full - df_null
+p_value <- pchisq(LR_stat, df_diff, lower.tail = FALSE)
+round(LR_stat, 2)
+round(p_value, 3)
+round(df_diff, 0)
 ## --------
 
 
@@ -422,6 +434,18 @@ model9 <- mvord(
 sink("./outputs/models/model9.txt")
 print(summary(model9))
 rm(model9)
+
+# likelihood ratio test
+ll_null <- as.numeric(logLik(model7))
+ll_full <- as.numeric(logLik(model9))
+df_null <- attr(logLik(model7), "df")
+df_full <- attr(logLik(model9), "df")
+LR_stat <- 2 * (ll_full - ll_null)
+df_diff <- df_full - df_null
+p_value <- pchisq(LR_stat, df_diff, lower.tail = FALSE)
+round(LR_stat, 2)
+round(p_value, 3)
+round(df_diff, 0)
 ## --------
 
 
@@ -541,6 +565,18 @@ model12 <- mvord(
 sink("./outputs/models/model12.txt")
 print(summary(model12))
 rm(model12)
+
+# likelihood ratio test
+ll_null <- as.numeric(logLik(model10))
+ll_full <- as.numeric(logLik(model12))
+df_null <- attr(logLik(model10), "df")
+df_full <- attr(logLik(model12), "df")
+LR_stat <- 2 * (ll_full - ll_null)
+df_diff <- df_full - df_null
+p_value <- pchisq(LR_stat, df_diff, lower.tail = FALSE)
+round(LR_stat, 2)
+round(p_value, 3)
+round(df_diff, 0)
 ## --------
 
 
@@ -660,6 +696,18 @@ model15 <- mvord(
 sink("./outputs/models/model15.txt")
 print(summary(model15))
 rm(model15)
+
+# likelihood ratio test
+ll_null <- as.numeric(logLik(model13))
+ll_full <- as.numeric(logLik(model15))
+df_null <- attr(logLik(model13), "df")
+df_full <- attr(logLik(model15), "df")
+LR_stat <- 2 * (ll_full - ll_null)
+df_diff <- df_full - df_null
+p_value <- pchisq(LR_stat, df_diff, lower.tail = FALSE)
+round(LR_stat, 2)
+round(p_value, 3)
+round(df_diff, 0)
 ## --------
 
 
@@ -780,6 +828,18 @@ sink("./outputs/models/model18.txt")
 print(summary(model18))
 rm(model18)
 closeAllConnections()
+
+# likelihood ratio test
+ll_null <- as.numeric(logLik(model16))
+ll_full <- as.numeric(logLik(model18))
+df_null <- attr(logLik(model16), "df")
+df_full <- attr(logLik(model18), "df")
+LR_stat <- 2 * (ll_full - ll_null)
+df_diff <- df_full - df_null
+p_value <- pchisq(LR_stat, df_diff, lower.tail = FALSE)
+round(LR_stat, 2)
+round(p_value, 3)
+round(df_diff, 0)
 ## --------
 
 
@@ -899,6 +959,18 @@ model21 <- mvord(
 sink("./outputs/models/model21.txt")
 print(summary(model21))
 rm(model21)
+
+# likelihood ratio test
+ll_null <- as.numeric(logLik(model19))
+ll_full <- as.numeric(logLik(model21))
+df_null <- attr(logLik(model19), "df")
+df_full <- attr(logLik(model21), "df")
+LR_stat <- 2 * (ll_full - ll_null)
+df_diff <- df_full - df_null
+p_value <- pchisq(LR_stat, df_diff, lower.tail = FALSE)
+round(LR_stat, 2)
+round(p_value, 3)
+round(df_diff, 0)
 ## --------
 
 
@@ -1018,6 +1090,18 @@ model24 <- mvord(
 sink("./outputs/models/model24.txt")
 print(summary(model24))
 rm(model24)
+
+# likelihood ratio test
+ll_null <- as.numeric(logLik(model22))
+ll_full <- as.numeric(logLik(model24))
+df_null <- attr(logLik(model22), "df")
+df_full <- attr(logLik(model24), "df")
+LR_stat <- 2 * (ll_full - ll_null)
+df_diff <- df_full - df_null
+p_value <- pchisq(LR_stat, df_diff, lower.tail = FALSE)
+round(LR_stat, 2)
+round(p_value, 3)
+round(df_diff, 0)
 ## --------
 
 #------------------------------------------------------------------------------#
@@ -1208,6 +1292,17 @@ sink("./outputs/models/model27.txt")
 print(summary(model27))
 rm(model27)
 
+# likelihood ratio test
+ll_null <- as.numeric(logLik(model25))
+ll_full <- as.numeric(logLik(model27))
+df_null <- attr(logLik(model25), "df")
+df_full <- attr(logLik(model27), "df")
+LR_stat <- 2 * (ll_full - ll_null)
+df_diff <- df_full - df_null
+p_value <- pchisq(LR_stat, df_diff, lower.tail = FALSE)
+round(LR_stat, 2)
+round(p_value, 3)
+round(df_diff, 3)
 #------------------------------------------------------------------------------#
 #------------------------------------------------------------------------------#
 
@@ -1215,8 +1310,19 @@ rm(model27)
 ### Ordered probit model of increase in TU or TTU between AV and HV (AV - HV) ##
 ################################################################################
 
-# full model
+# null model
 model28 <- polr(
+  diff_tu ~
+    1,
+  data = df, Hess = TRUE
+)
+sink("./outputs/models/model28.txt")
+print(summary(model28))
+closeAllConnections()
+pR2(model28)
+
+# full model
+model29 <- polr(
   diff_tu ~
     age_grp_2 + age_grp_3 + gender_1 +
     education_2 + education_3 + school_2 +
@@ -1241,21 +1347,33 @@ model28 <- polr(
     tba_g5_diff + tba_g6_diff + tba_g7_diff,
   data = df, Hess = TRUE, method = "probit"
 )
-sink("./outputs/models/model28.txt")
-print(summary(model28))
+sink("./outputs/models/model29.txt")
+print(summary(model29))
 
 # final model
-model29 <- polr(
+model30 <- polr(
   diff_tu ~
     race_1 + citation_1 + companion_3 +
     companion_4 + trip_exp_1 + trip_exp_3 +
     av_usefulness + driving_enjoyment + tba_g2_diff,
   data = df, Hess = TRUE
 )
-sink("./outputs/models/model29.txt")
-print(summary(model29))
+sink("./outputs/models/model30.txt")
+print(summary(model30))
 closeAllConnections()
-pR2(model29)
+pR2(model30)
+
+# likelihood ratio test
+ll_null <- as.numeric(logLik(model28))
+ll_full <- as.numeric(logLik(model30))
+df_null <- attr(logLik(model28), "df")
+df_full <- attr(logLik(model30), "df")
+LR_stat <- 2 * (ll_full - ll_null)
+df_diff <- df_full - df_null
+p_value <- pchisq(LR_stat, df_diff, lower.tail = FALSE)
+round(LR_stat, 2)
+round(p_value, 3)
+round(df_diff, 3)
 
 #------------------------------------------------------------------------------#
 #------------------------------------------------------------------------------#

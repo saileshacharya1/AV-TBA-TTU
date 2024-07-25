@@ -1,0 +1,30 @@
+Call:
+polr(formula = diff_tu ~ race_1 + citation_1 + companion_3 + 
+    companion_4 + trip_exp_1 + trip_exp_3 + av_usefulness + driving_enjoyment + 
+    tba_g2_diff, data = df, Hess = TRUE)
+
+Coefficients:
+                    Value Std. Error t value
+race_11            0.3288    0.18712   1.757
+citation_11       -0.2631    0.14625  -1.799
+companion_31       0.8033    0.26874   2.989
+companion_41      -0.4605    0.20848  -2.209
+trip_exp_11       -0.2431    0.14656  -1.658
+trip_exp_31        0.4655    0.21778   2.137
+av_usefulness      0.7757    0.08775   8.840
+driving_enjoyment -0.7268    0.19109  -3.803
+tba_g2_diff        0.3207    0.08372   3.831
+
+Intercepts:
+      Value    Std. Error t value 
+-4|-3  -4.2378   0.3435   -12.3364
+-3|-2  -3.2846   0.2691   -12.2063
+-2|-1  -2.0118   0.2228    -9.0305
+-1|0   -0.9092   0.2065    -4.4024
+0|1     1.5883   0.2125     7.4735
+1|2     3.1374   0.2469    12.7057
+2|3     4.7843   0.3648    13.1136
+3|4     5.8172   0.5406    10.7598
+
+Residual Deviance: 1982.584 
+AIC: 2016.584 

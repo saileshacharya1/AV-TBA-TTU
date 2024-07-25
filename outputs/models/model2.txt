@@ -1,4 +1,4 @@
-lavaan 0.6.15 ended normally after 130 iterations
+lavaan 0.6.16 ended normally after 130 iterations
 
   Estimator                                         ML
   Optimization method                           NLMINB
@@ -239,20 +239,7 @@ Regressions:
     hh_adult             0.006    0.030    0.201    0.841    0.010    0.009
     hh_child             0.003    0.029    0.099    0.921    0.004    0.005
     income_grp_2         0.005    0.088    0.062    0.951    0.009    0.004
-    income_grp_3        -0.030    0.100   -0.296    0.767   -0.047   -0.020
-    income_grp_4         0.001    0.111    0.005    0.996    0.001    0.000
-    income_grp_5         0.101    0.117    0.861    0.389    0.160    0.065
-    employment_2        -0.134    0.098   -1.365    0.172   -0.211   -0.071
-    employment_3        -0.011    0.081   -0.133    0.894   -0.017   -0.008
-    driving_exp         -0.004    0.003   -1.086    0.277   -0.006   -0.093
-    citation_1          -0.034    0.062   -0.549    0.583   -0.054   -0.026
-    crash_exp_1          0.093    0.065    1.435    0.151    0.147    0.069
-    hh_vehs              0.002    0.041    0.038    0.970    0.002    0.002
-    mode_commute_3       0.019    0.098    0.192    0.848    0.030    0.010
-    mode_shoppng_3       0.182    0.124    1.469    0.142    0.288    0.071
-    mode_personl_3       0.060    0.110    0.540    0.589    0.094    0.027
-    mode_social_3       -0.068    0.105   -0.652    0.514   -0.108   -0.032
-    rec_trips            0.012    0.013    0.936    0.349    0.019    0.041
+ [ reached getOption("max.print") -- omitted 14 rows ]
 
 Covariances:
                        Estimate  Std.Err  z-value  P(>|z|)   Std.lv  Std.all
@@ -343,3 +330,5 @@ R-Square:
     polychronicity    0.195
     envt_concern      0.097
 
+'log Lik.' -1742.91 (df=9.117904)
+'log Lik.' -1742.91 (df=9.117904)

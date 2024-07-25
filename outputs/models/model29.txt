@@ -1,30 +1,96 @@
 Call:
-polr(formula = diff_tu ~ race_1 + citation_1 + companion_3 + 
-    companion_4 + trip_exp_1 + trip_exp_3 + av_usefulness + driving_enjoyment + 
-    tba_g2_diff, data = df, Hess = TRUE)
+polr(formula = diff_tu ~ age_grp_2 + age_grp_3 + gender_1 + education_2 + 
+    education_3 + school_2 + school_3 + employment_2 + employment_3 + 
+    race_1 + hh_adult + hh_child + income_grp_2 + income_grp_3 + 
+    income_grp_4 + income_grp_5 + driving_exp + hh_vehs + mode_commute_3 + 
+    mode_shopping_3 + mode_personal_3 + mode_social_3 + citation_1 + 
+    crash_exp_1 + rec_trips + time + cost + veh_own_1 + veh_type_1 + 
+    veh_type_2 + veh_type_3 + veh_feature_1 + veh_feature_2 + 
+    veh_feature_3 + veh_feature_4 + veh_feature_5 + veh_feature_6 + 
+    veh_feature_7 + companion_tot + companion_1 + companion_2 + 
+    companion_3 + companion_4 + companion_5 + per_drive_3 + per_drive_4 + 
+    per_drive_5 + trip_exp_1 + trip_exp_3 + trip_exp_4 + av_usefulness + 
+    av_concern + tech_savviness + driving_enjoyment + polychronicity + 
+    envt_concern + tba_g1_diff + tba_g2_diff + tba_g3_diff + 
+    tba_g4_diff + tba_g5_diff + tba_g6_diff + tba_g7_diff, data = df, 
+    Hess = TRUE, method = "probit")
 
 Coefficients:
-                    Value Std. Error t value
-race_11            0.3288    0.18712   1.757
-citation_11       -0.2631    0.14625  -1.799
-companion_31       0.8033    0.26874   2.989
-companion_41      -0.4605    0.20848  -2.209
-trip_exp_11       -0.2431    0.14656  -1.658
-trip_exp_31        0.4655    0.21778   2.137
-av_usefulness      0.7757    0.08775   8.840
-driving_enjoyment -0.7268    0.19109  -3.803
-tba_g2_diff        0.3207    0.08372   3.831
+                       Value Std. Error  t value
+age_grp_21        -0.1027491  0.1229644 -0.83560
+age_grp_31        -0.3003044  0.2318685 -1.29515
+gender_11         -0.0995972  0.0955793 -1.04204
+education_21      -0.0499572  0.1040165 -0.48028
+education_31      -0.0139550  0.1512769 -0.09225
+school_21         -0.2892037  0.1877820 -1.54010
+school_31          0.1632203  0.1151011  1.41806
+employment_21      0.1058847  0.1564188  0.67693
+employment_31     -0.0185353  0.1203777 -0.15398
+race_11            0.2257779  0.1226614  1.84066
+hh_adult          -0.0079551  0.0481234 -0.16531
+hh_child           0.0049698  0.0526123  0.09446
+income_grp_21      0.2347713  0.1377036  1.70490
+income_grp_31      0.1203828  0.1529945  0.78684
+income_grp_41      0.4139914  0.1744445  2.37320
+income_grp_51      0.2464093  0.1810480  1.36102
+driving_exp       -0.0014012  0.0047865 -0.29274
+hh_vehs           -0.0446039  0.0629601 -0.70845
+mode_commute_31    0.0929475  0.1472301  0.63131
+mode_shopping_31  -0.0324378  0.2010364 -0.16135
+mode_personal_31   0.1042437  0.1645271  0.63360
+mode_social_31    -0.0517108  0.1713826 -0.30173
+citation_11       -0.1981548  0.0949566 -2.08679
+crash_exp_11       0.0703661  0.1011677  0.69554
+rec_trips         -0.0047170  0.0203795 -0.23146
+time               0.0018749  0.0037895  0.49477
+cost              -0.0002755  0.0002413 -1.14174
+veh_own_11        -0.0812548  0.1429420 -0.56845
+veh_type_11        0.1561236  0.1562600  0.99913
+veh_type_21        0.1389984  0.1530845  0.90798
+veh_type_31        0.0275330  0.1914091  0.14384
+veh_feature_11    -0.0403898  0.1169641 -0.34532
+veh_feature_21    -0.1482133  0.1210024 -1.22488
+veh_feature_31    -0.1012876  0.0908097 -1.11538
+veh_feature_41    -0.0319783  0.1100170 -0.29067
+veh_feature_51     0.1690832  0.1303941  1.29671
+veh_feature_61     0.0521967  0.1137251  0.45897
+veh_feature_71     0.0175782  0.1059775  0.16587
+companion_tot     -0.0359803  0.0289134 -1.24442
+companion_11       0.0841063  0.1134041  0.74165
+companion_21      -0.1311416  0.1208564 -1.08510
+companion_31       0.4439940  0.1698940  2.61336
+companion_41      -0.2628486  0.1317551 -1.99498
+companion_51       0.0491521  0.1282245  0.38333
+per_drive_31      -0.0184057  0.1304300 -0.14112
+per_drive_41      -0.1867664  0.1455752 -1.28295
+per_drive_51      -0.1787982  0.1250659 -1.42963
+trip_exp_11       -0.1360527  0.0930461 -1.46221
+trip_exp_31        0.3059040  0.1296748  2.35901
+trip_exp_41        0.0767668  0.0929669  0.82574
+av_usefulness      0.4648615  0.0979466  4.74607
+av_concern        -0.0324045  0.0545011 -0.59457
+tech_savviness    -0.0625844  0.1252307 -0.49975
+driving_enjoyment -0.3743258  0.1184020 -3.16148
+polychronicity    -0.0226106  0.0763060 -0.29631
+envt_concern       0.0431112  0.0929307  0.46391
+tba_g1_diff       -0.0089733  0.0961841 -0.09329
+tba_g2_diff        0.1384024  0.0585946  2.36203
+tba_g3_diff        0.0490892  0.0641068  0.76574
+tba_g4_diff        0.0241318  0.0549859  0.43887
+tba_g5_diff        0.0566617  0.0683860  0.82856
+tba_g6_diff        0.0520278  0.0474110  1.09738
+tba_g7_diff       -0.1008477  0.0873053 -1.15512
 
 Intercepts:
-      Value    Std. Error t value 
--4|-3  -4.2378   0.3435   -12.3364
--3|-2  -3.2846   0.2691   -12.2063
--2|-1  -2.0118   0.2228    -9.0305
--1|0   -0.9092   0.2065    -4.4024
-0|1     1.5883   0.2125     7.4735
-1|2     3.1374   0.2469    12.7057
-2|3     4.7843   0.3648    13.1136
-3|4     5.8172   0.5406    10.7598
+      Value   Std. Error t value
+-4|-3 -2.5872  0.3743    -6.9120
+-3|-2 -2.0925  0.3615    -5.7878
+-2|-1 -1.3778  0.3538    -3.8941
+-1|0  -0.7254  0.3522    -2.0595
+0|1    0.8045  0.3527     2.2809
+1|2    1.6923  0.3560     4.7535
+2|3    2.4891  0.3711     6.7077
+3|4    2.9069  0.3953     7.3546
 
-Residual Deviance: 1982.584 
-AIC: 2016.584 
+Residual Deviance: 1934.414 
+AIC: 2076.414 
